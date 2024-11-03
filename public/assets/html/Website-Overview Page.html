@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Trial Website Pages</title>
+  <style>
+/* Font Imports */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;700&display=swap');
+
+/* Local Aldrich Font */
+@font-face {
+  font-family: 'Aldrich';
+  src: url('/path-to-fonts/aldrich-regular-webfont.woff2') format('woff2'),
+       url('/path-to-fonts/aldrich-regular-webfont.woff') format('woff'),
+       url('/path-to-fonts/Aldrich-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Local SovjetBox Bold */
+@font-face {
+  font-family: 'SovjetBoxBold';
+  src: url('/path-to-fonts/sovjetboxbd_v0_9-webfont.woff') format('woff'),
+       url('/path-to-fonts/SovjetBoxBd_v0_9.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Local SovjetBox Small Caps */
+@font-face {
+  font-family: 'SovjetBoxSC';
+  src: url('/path-to-fonts/sovjetboxsc_v0_9-webfont.woff') format('woff'),
+       url('/path-to-fonts/SovjetBoxSC_v0_9.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset and Basic Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Newsreader', serif;
+  color: #2D2D2D;
+  background-color: #f3f3f3;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Header Styling */
+.header1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #D7DBDD;
+  padding: 85px 20px;
+  color: #2D2D2D;
+  border-bottom: 2px solid #D9EAF4;
+  box-shadow: 0 4px 10px rgba(0, 80, 158, 0.2);
+  position: relative;
+}
+
+.header1 h1 {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 1.5rem;
+  color: #00509E;
+  margin: 5px 0;
+}
+
+.header1 .intro1 {
+  font-size: 1rem;
+  color: #2D2D2D;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+/* Footer Styling */
+.footer1 {
+  background-color: #D7DBDD;
+  color: #2D2D2D;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 2px solid #D9EAF4;
+}
+
+.footer1 .footer-company1 {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 1.3rem;
+  color: #00509E;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.footer1 .footer-info1 {
+  margin: 5px 0;
+}
+
+.footer1 .footer-disclaimer1 {
+  font-size: 0.85rem;
+  color: #555555;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+    /* Section and Title Styling */
+    h1 {
+      font-family: 'Aldrich', sans-serif;
+      font-size: 32px;
+      color: #00509E;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-family: 'Aldrich', sans-serif;
+      font-size: 25px;
+      color: #0077C8;
+      margin-top: 1.5rem;
+      border-bottom: 2px solid #D9EAF4;
+      padding-bottom: 0.5rem;
+    }
+
+    p, li {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #2D2D2D;
+    }
+
+    /* Section Styling */
+    .section {
+      background-color: #FFFFFF;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 80, 158, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .section1:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 15px rgba(0, 80, 158, 0.15);
+    }
+
+    /* List Styling */
+    .section1 ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .section1 ul li {
+      margin-bottom: 0.8rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .section1 ul li::before {
+      content: "•";
+      color: #0077C8;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Call-to-Action Button */
+    .cta-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #00509E;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 15px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #003F7D;
+      transform: translateY(-2px);
+    }
+
+    /* Implementation Tips Section Styling */
+    .tips-section {
+      background-color: #F1F5FA;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 40px;
+      box-shadow: 0 4px 12px rgba(0, 80, 158, 0.1);
+    }
+
+    .tips-section h2 {
+      font-family: 'Aldrich', sans-serif;
+      font-size: 26px;
+      color: #00509E;
+      margin-bottom: 1rem;
+    }
+
+    .tips-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .tips-list li {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #0077C8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header1">
+    <h1>Suggested Pages for Clinical Trial Website </h1>
+    <p class="intro1"><strong>Quick Look:</strong> Comprehensive information on clinical trial process, active trials, resources, and safety for prospective participants.</p>
+  </header>
+
+  <div class="content-wrapper">
+  <!-- Page Sections -->
+  <section id="what-to-expect" class="section">
+    <h2>1. What to Expect Page</h2>
+    <p><strong>Purpose:</strong> Guide participants from the pre-screening form to trial completion, explaining each step.</p>
+    <ul>
+      <li><strong>Overview:</strong> Complete clinical trial process explained.</li>
+      <li><strong>Details:</strong> Pre-screening, in-person visits, monitoring, and completion phases.</li>
+      <li><strong>Expectations:</strong> Communication and follow-up expectations set clearly.</li>
+      <li><strong>Visual Aid:</strong> Timeline or infographic for better clarity.</li>
+    </ul>
+    <a href="#pre-screening-form" class="cta-button">Go to Pre-Screening Form</a>
+    <a href="#faqs" class="cta-button">Visit FAQs</a>
+  </section>
+
+  <section id="trial-specific-pages" class="section">
+    <h2>2. Trial-Specific Pages (Visit & Travel Information)</h2>
+    <p><strong>Purpose:</strong> Provide logistics and travel details specific to each trial.</p>
+    <ul>
+      <li><strong>Frequency:</strong> Visit schedules and location information.</li>
+      <li><strong>Travel Support:</strong> Accommodations or reimbursements info.</li>
+      <li><strong>Navigation:</strong> Map and directions to the trial site.</li>
+    </ul>
+    <a href="#pre-screening-form" class="cta-button">Fill Out Pre-Screen Form</a>
+  </section>
+
+  <section id="active-clinical-trials" class="section">
+    <h2>3. Active Clinical Trials Overview Page</h2>
+    <p><strong>Purpose:</strong> A landing page for all current trials, providing an overview with links to more details.</p>
+    <ul>
+      <li><strong>Trial List:</strong> Brief description of active trials.</li>
+      <li><strong>Highlights:</strong> Eligibility criteria and main benefits of each trial.</li>
+    </ul>
+    <a href="#view-trials" class="cta-button">View Trials & Pre-Screening</a>
+  </section>
+
+  <section id="individual-trial-pages" class="section">
+    <h2>4. Individual Clinical Trial Pages</h2>
+    <p><strong>Purpose:</strong> Offer in-depth details about each active trial.</p>
+    <ul>
+      <li><strong>Details:</strong> Trial purpose, duration, phases, risks, and rewards.</li>
+      <li><strong>Commitment:</strong> Time, visits, and data collection expectations.</li>
+      <li><strong>Compensation:</strong> Benefits and safety protocols outlined.</li>
+    </ul>
+    <a href="#pre-screening-form" class="cta-button">Pre-Screen for This Trial</a>
+  </section>
+
+  <section id="content-hub" class="section">
+    <h2>5. Content Hub / Resource Page</h2>
+    <p><strong>Purpose:</strong> Centralized location for articles, case studies, and testimonials, gated for community access.</p>
+    <ul>
+      <li><strong>Resources:</strong> Case studies, participant testimonials, educational articles.</li>
+      <li><strong>Search & Filter:</strong> For easier access to relevant content.</li>
+    </ul>
+    <a href="#resources" class="cta-button">Access Resources</a>
+  </section>
+
+  <section id="seo-mini-blogs" class="section">
+    <h2>6. SEO Mini Blog Pages</h2>
+    <p><strong>Purpose:</strong> Target keywords related to case studies, aimed at driving organic traffic.</p>
+    <ul>
+      <li><strong>Blog Posts:</strong> 4-5 SEO-focused mini blogs on case studies, experiences, and benefits.</li>
+      <li><strong>Linking:</strong> Connect to full case studies or trial details.</li>
+    </ul>
+    <a href="#case-study-hub" class="cta-button">Explore Case Studies</a>
+    <a href="#pre-screening-form" class="cta-button">Start Pre-Screening</a>
+  </section>
+
+  <section id="risk-assessment" class="section">
+    <h2>7. Risk Assessment & Trial Participation</h2>
+    <p><strong>Purpose:</strong> Provide a comprehensive overview of risks involved in participating in clinical trials.</p>
+    <ul>
+      <li><strong>Risks:</strong> Possible side effects and management methods.</li>
+      <li><strong>Safety Transparency:</strong> Clear explanation of trial phases.</li>
+    </ul>
+    <a href="#safety-regulations" class="cta-button">Learn About Safety Regulations</a>
+    <a href="#pre-screening-form" class="cta-button">Check Your Eligibility</a>
+  </section>
+
+  <section id="faq" class="section">
+    <h2>8. FAQ & Q&A</h2>
+    <p><strong>Purpose:</strong> Address common questions and concerns.</p>
+    <ul>
+      <li><strong>FAQs:</strong> Covering trial processes, compensation, expectations, etc.</li>
+      <li><strong>Expandable Q&A:</strong> For easy navigation.</li>
+    </ul>
+    <a href="#pre-screening-form" class="cta-button">Start Pre-Screening</a>
+  </section>
+
+  <section id="privacy-policy" class="section">
+    <h2>9. Marketing Captains / Privacy Policy</h2>
+    <p><strong>Purpose:</strong> Legal and compliance page ensuring transparency about how user data will be handled.</p>
+    <ul>
+      <li><strong>Data Policy:</strong> Data collection, consent, and usage information.</li>
+    </ul>
+    <a href="#privacy-consent" class="cta-button">Agree to Privacy Policies</a>
+  </section>
+
+  <section id="cookie-consent" class="section">
+    <h2>10. Cookie Consent Management & Cookies</h2>
+    <p><strong>Purpose:</strong> Manage user consent for cookies in line with regulations.</p>
+    <ul>
+      <li><strong>Cookie Explanation:</strong> Tracking for remarketing or analytics.</li>
+    </ul>
+    <a href="#manage-cookies" class="cta-button">Manage Cookie Preferences</a>
+  </section>
+
+  <!-- Implementation Tips Section -->
+  <section class="tips-section">
+    <h2>Implementation Tips</h2>
+    <ul class="tips-list">
+      <li><span class="highlight">Content Hub:</span> Implement a gated content strategy where access to more detailed case studies and trial testimonials is unlocked once the user shows higher intent (e.g., filling out the pre-screen form).</li>
+      <li><span class="highlight">SEO Strategy:</span> Use keyword research to create mini blogs that target the specific keywords users might search for when considering clinical trial participation (e.g., “clinical trial participant benefits” or “risks of clinical trials”).</li>
+      <li><span class="highlight">Analytics:</span> Track visitor activity on each page to gauge intent and interest. Use this data to refine the content or add personalized CTAs based on the user’s journey.</li>
+    </ul>
+    <p>With this structure, you’ll build a funnel that effectively guides participants from consideration to decision, ensuring their journey is seamless and well-informed.</p>
+  </section>
+</div>
+
+  <!-- Footer Section -->
+  <footer class="footer1">
+    <p class="footer-company1">TBH Digital Solutions</p>
+    <p class="footer-info1">Contact us: 636-566-1862 | info@TBHDigitalSolutions.com</p>
+    <p>&copy; 2024 TBH Digital Solutions. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

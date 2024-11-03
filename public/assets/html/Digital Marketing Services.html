@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Services</title>
+  <style>
+/* Font Imports */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;700&display=swap');
+
+/* Local Aldrich Font */
+@font-face {
+  font-family: 'Aldrich';
+  src: url('/path-to-fonts/aldrich-regular-webfont.woff2') format('woff2'),
+       url('/path-to-fonts/aldrich-regular-webfont.woff') format('woff'),
+       url('/path-to-fonts/Aldrich-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Local SovjetBox Bold */
+@font-face {
+  font-family: 'SovjetBoxBold';
+  src: url('/path-to-fonts/sovjetboxbd_v0_9-webfont.woff') format('woff'),
+       url('/path-to-fonts/SovjetBoxBd_v0_9.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Local SovjetBox Small Caps */
+@font-face {
+  font-family: 'SovjetBoxSC';
+  src: url('/path-to-fonts/sovjetboxsc_v0_9-webfont.woff') format('woff'),
+       url('/path-to-fonts/SovjetBoxSC_v0_9.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset and Basic Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Newsreader', serif;
+  color: #2D2D2D;
+  background-color: #f3f3f3;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #D7DBDD;
+  padding: 85px 20px;
+  color: #2D2D2D;
+  border-bottom: 2px solid #D9EAF4;
+  box-shadow: 0 4px 10px rgba(0, 80, 158, 0.2);
+  position: relative;
+}
+
+.header h1 {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 1.8rem;
+  color: #00509E;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.header .header-title {
+  font-size: 1.2rem;
+  color: #2D2D2D;
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #D7DBDD;
+  color: #2D2D2D;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 2px solid #D9EAF4;
+}
+
+.footer .footer-company {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 1.3rem;
+  color: #00509E;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.footer .footer-info {
+  margin: 5px 0;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  color: #555555;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+/* Section and Title Styling */
+h1, h2 {
+  font-family: 'Aldrich', sans-serif;
+  color: #00509E;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin-top: 1.5rem;
+  border-bottom: 2px solid #D9EAF4;
+  padding-bottom: 0.5rem;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #2D2D2D;
+}
+
+/* Section Styling */
+.section, .service-section {
+  background-color: #FFFFFF;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 80, 158, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover, .service-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 80, 158, 0.15);
+}
+
+.service-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.service-section ul li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.service-section ul li::before {
+  content: "•";
+  color: #0077C8;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #00509E;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #003F7D;
+  transform: translateY(-2px);
+}
+
+.highlight {
+  font-weight: bold;
+  color: #0077C8;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Digital Marketing Services</h1>
+    <p class="intro"><strong>Quick Look:</strong> Our Digital Marketing Services offer a full suite to build your brand’s visibility, engage your audience, and drive measurable results across digital channels.</p>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div class="content-wrapper">
+    <section class="service-section">
+      <h2>Digital Marketing Essentials</h2>
+      <ul>
+        <li><strong>Google Analytics 4 (GA4)</strong> – Real-time tracking of user behavior and conversions for performance insights.</li>
+        <li><strong>Google Tag Manager (GTM)</strong> – Simplified website tag and event tracking for deeper user action analysis.</li>
+        <li><strong>PPC & Meta Ads</strong> – Targeted ads on Google and Meta (Facebook/Instagram) to drive traffic and conversions.</li>
+        <li><strong>Consent Management Platform (CMP)</strong> – Manages user data consent for privacy compliance and trust building.</li>
+        <li><strong>Geo-Targeting & Geofencing</strong> – Targeted outreach based on geographic location to increase relevance and engagement.</li>
+      </ul>
+    </section>
+
+      <section class="service-section">
+        <h2>Social Media Marketing</h2>
+        <ul>
+          <li><strong>Facebook & Instagram Ads</strong> – Precision-targeted ads for audience growth and engagement.</li>
+          <li><strong>LinkedIn Advertising</strong> – B2B ads reaching professionals by industry and job title.</li>
+          <li><strong>Twitter Ads</strong> – Promote brand and drive interactions on Twitter with targeted ads.</li>
+          <li><strong>YouTube Video Ads</strong> – Video ads to reach audiences on YouTube, ideal for brand storytelling.</li>
+          <li><strong>Pinterest Marketing</strong> – Visually driven campaigns for product and lifestyle promotions.</li>
+        </ul>
+      </section>
+
+      <section class="service-section">
+        <h2>SEO (Search Engine Optimization)</h2>
+        <ul>
+          <li><strong>Keyword Research & Optimization</strong> – Effective keywords to boost visibility and search rankings.</li>
+          <li><strong>On-Page & Off-Page SEO</strong> – Enhance site authority with optimized content and quality backlinks.</li>
+          <li><strong>Content Optimization & Blogging</strong> – SEO-rich blog content to drive organic traffic and authority.</li>
+          <li><strong>Local SEO & Google My Business</strong> – Improved visibility for local searches and engagement.</li>
+          <li><strong>Technical SEO</strong> – Backend optimizations for better site performance and ranking.</li>
+        </ul>
+      </section>
+
+      <section class="service-section">
+        <h2>Email Marketing</h2>
+        <ul>
+          <li><strong>Automated Email Campaigns</strong> – Personalized, automated email sequences for targeted outreach.</li>
+          <li><strong>List Segmentation & Targeting</strong> – Organize audiences for highly relevant content delivery.</li>
+          <li><strong>A/B Testing for Emails</strong> – Optimize email components to improve open and click-through rates.</li>
+          <li><strong>Newsletter Creation</strong> – Keep audiences informed with engaging, consistent newsletters.</li>
+          <li><strong>Behavioral Email Triggers</strong> – Real-time engagement with emails triggered by user actions.</li>
+        </ul>
+      </section>
+
+      <section class="service-section">
+        <h2>Content Marketing</h2>
+        <ul>
+          <li><strong>Content Strategy Development</strong> – Align content with brand goals and audience needs for maximum impact.</li>
+          <li><strong>Blog & Article Writing</strong> – SEO-optimized, engaging blog content for audience engagement.</li>
+          <li><strong>Case Studies & Whitepapers</strong> – Build credibility with in-depth, authoritative content pieces.</li>
+          <li><strong>Infographics & Visual Content</strong> – Data-driven visuals for memorable brand messaging.</li>
+          <li><strong>Video Content Strategy</strong> – Plan and produce impactful video content like tutorials or testimonials.</li>
+        </ul>
+      </section>
+
+      <section class="service-section">
+        <h2>Website & Conversion Optimization</h2>
+        <ul>
+          <li><strong>Landing Page Creation</strong> – High-converting landing pages for campaigns and lead generation.</li>
+          <li><strong>Conversion Rate Optimization (CRO)</strong> – Techniques to increase visitor-to-customer conversions.</li>
+          <li><strong>UX/UI Design Enhancements</strong> – Improve site navigation for a seamless user experience.</li>
+          <li><strong>Heat Mapping & User Tracking</strong> – Insights on user behavior to inform strategy adjustments.</li>
+          <li><strong>Lead Capture Forms & Pop-Ups</strong> – Strategically placed forms for efficient lead generation.</li>
+        </ul>
+      </section>
+    </div>
+
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p class="footer-company">TBH Digital Solutions</p>
+    <p class="footer-info">Contact us: 636-566-1862 | info@TBHDigitalSolutions.com</p>
+    <p>&copy; 2024 TBH Digital Solutions. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

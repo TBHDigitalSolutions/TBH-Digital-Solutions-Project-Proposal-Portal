@@ -1,0 +1,278 @@
+{
+  "steps": [
+    {
+      "id": 1,
+      "title": "Proposal: Andover Eye Institute",
+      "subtitle": "Welcome Video",
+      "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step1/videos/step_1_video/1.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Proposal: Andover Eye Institute",
+      "subtitle": "Website Build",
+      "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/videos/step_2_video/2.mp4",
+      "slides": [
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_1/home3.jpg", "alt": "Website Build" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_2/home5.jpg", "alt": "Website Build" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_3/WebsiteExamples.png", "alt": "Website Build" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_4/SSOLeadGeneration.png", "alt": "Website Build" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_5/GatedWebsiteContent.png", "alt": "Website Build" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_6/Faq Sheet - 1.png", "alt": "Website Build" }
+      ],
+      "demos": {
+        "LandingPageExample1": {
+          "componentKey": "LandingPageExample1",
+          "websiteUrl": "/assets/websiteexamplefolder/LandingPage1/index.html",
+          "alt": "Landing Page Example 1",
+          "thumbnail": "/assets/websiteexamplefolder/lp1.png"
+        },
+        "LandingPageExample2": {
+          "componentKey": "LandingPageExample2",
+          "websiteUrl": "/assets/websiteexamplefolder/LandingPage2/landing-lead-img.html",
+          "alt": "Landing Page Example 2",
+          "thumbnail": "/assets/websiteexamplefolder/lp2.png"
+        },
+        "LandingPageExample3": {
+          "componentKey": "LandingPageExample3",
+          "websiteUrl": "/assets/websiteexamplefolder/LandingPage3/startbootstrap-grayscale-master/dist/index.html",
+          "alt": "Landing Page Example 3",
+          "thumbnail": "/assets/websiteexamplefolder/lp3.png"
+        },
+        "WebsiteExample1": {
+          "componentKey": "WebsiteExample1",
+          "websiteUrl": "/assets/websiteexamplefolder/WebsiteExample1/home-2.html",
+          "alt": "Website Example 1",
+          "thumbnail": "/assets/websiteexamplefolder/web1.png"
+        },
+        "WebsiteExample2": {
+          "componentKey": "WebsiteExample2",
+          "websiteUrl": "/assets/websiteexamplefolder/WebsiteExample2/placeholder/index.html",
+          "alt": "Website Example 2",
+          "thumbnail": "/assets/websiteexamplefolder/web2.1.png"
+        },
+        "WebsiteExample3": {
+          "componentKey": "WebsiteExample3",
+          "websiteUrl": "/assets/websiteexamplefolder/WebsiteExample3/index.html",
+          "alt": "Website Example 3",
+          "thumbnail": "/assets/websiteexamplefolder/web3.png"
+        },
+        "DashBoardExample": {
+          "componentKey": "DashBoardExample",
+          "websiteUrl": "/assets/websiteexamplefolder/DashBoardExample/dist/index.html",
+          "alt": "Dashboard Example",
+          "thumbnail": "/assets/websiteexamplefolder/dash.png"
+        },
+        "FormExample": {
+          "componentKey": "FormExample",
+          "websiteUrl": "/assets/websiteexamplefolder/clinical-trial-form/index.html",
+          "alt": "Form Example",
+          "thumbnail": "/assets/websiteexamplefolder/form.png"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "title": "Proposal: Andover Eye Institute",
+      "subtitle": "CRM Setup",
+      "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_video/3.mp4",
+      "slides": [
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8592.jpg", "alt": "CRM Setup Slide 1" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8593.JPG", "alt": "CRM Setup Slide 2" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8594.JPG", "alt": "CRM Setup Slide 3" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8606.jpg", "alt": "CRM Setup Slide 4" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_1/MainWide-75.jpg", "alt": "CRM Image 1" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_2/MainWide-75.jpg", "alt": "CRM Image 2" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_3/MainWide-75.jpg", "alt": "CRM Image 3" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_4/MainWide-75.jpg", "alt": "CRM Image 4" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_5/MainWide-75.jpg", "alt": "CRM Image 5" }
+      ],
+      "crmVideos": [
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-1-video/Email Automation.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-1-video/TBH Custom CRM-1.mp4",
+          "alt": "CRM Video 1 - Email Automation"
+        },
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-2-video/Appointment Setting.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-2-video/TBH Custom CRM-2.mp4",
+          "alt": "CRM Video 2 - Appointment Setting"
+        },
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-3-video/Smart Contact List.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-3-video/TBH Custom CRM-3.mp4",
+          "alt": "CRM Video 3 - Smart Contact List"
+        },
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-4-video/Marketing Reports.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-4-video/TBH Custom CRM-4.mp4",
+          "alt": "CRM Video 4 - Marketing Reports"
+        },
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-5-video/A and B Split Testing.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-5-video/TBH Custom CRM-5.mp4",
+          "alt": "CRM Video 5 - A/B Split Testing"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Proposal: Andover Eye Institute",
+      "subtitle": "Content Creation & Social Media Management",
+      "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video/4.mp4",
+      "slides": [
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8607.JPG", "alt": "Content Creation Slide 1" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_9169.jpg", "alt": "Content Creation Slide 2" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_9170.jpg", "alt": "Content Creation Slide 3" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_9171.JPG", "alt": "Content Creation Slide 4" }
+      ],
+      "imageCarousel": [
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/images/step_4_image_1/tabletCadSM.jpg", "alt": "Image 1" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/images/step_4_image_2/b7-01.jpg", "alt": "Image 2" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/images/step_4_image_3/1 Natoli Knows Sgments - Black-01.PNG", "alt": "Image 3" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/images/step_4_image_4/Examples-1-02.png", "alt": "Image 4" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/images/step_4_image_5/Examples-1-01.png", "alt": "Image 5" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/images/step_4_image_6/text message image-1.png", "alt": "Image 6" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/images/step_4_image_7/1-7455 Veterans Memorial Parkway, St Peters, MO 63376.png", "alt": "Image 7" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/images/step_4_image_8/2-7455 Veterans Memorial Parkway, St Peters, MO 63376.png", "alt": "Image 8" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/images/step_4_image_9/7455 Veterans Memorial Parkway, St Peters, MO 63376.png", "alt": "Image 9" }
+      ],
+      "videoCarousel": [
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_1/natoliscientific.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_1/Natoli Scientific - Short.mp4",
+          "alt": "Video 1"
+        },
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_2/ncf45.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_2/NCF-45 SM Short Clip 2 1-1.mp4",
+          "alt": "Video 2"
+        },
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_3/natoli-europe.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_3/natoli-europe-2022.mp4",
+          "alt": "Video 3"
+        },
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_4/segment.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_4/Black.mp4",
+          "alt": "Video 4"
+        },
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_5/MainWide-7455.jpg",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_5/FINAL VIDEO_3.mp4",
+          "alt": "Video 5"
+        }
+      ],
+      "bulkContentCreationExamples": [
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/z-VITAFOOD_BOOTH_VIDEO_FULL.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/z-VITAFOOD_BOOTH_VIDEO_FULL.mp4",
+          "alt": "Vitafood Booth Video Full"
+        },
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/z-8 Reasons_Natoli.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/z8 Reasons_Natoli.mp4",
+          "alt": "8 Reasons Natoli Video"
+        },
+        {
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/z8.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/z8.mp4",
+          "alt": "Content Creation Video z8"
+        }
+      ],
+      "bulkContentPDFs": [
+        {
+          "pdfUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/1.pdf",
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/1.png",
+          "alt": "PDF Document 1"
+        },
+        {
+          "pdfUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/2.pdf",
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/2.png",
+          "alt": "PDF Document 2"
+        },
+        {
+          "pdfUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/3.pdf",
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/3.png",
+          "alt": "PDF Document 3"
+        },
+        {
+          "pdfUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/4.pdf",
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/4.png",
+          "alt": "PDF Document 4"
+        },
+        {
+          "pdfUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/5.pdf",
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/5.png",
+          "alt": "PDF Document 5"
+        },
+        {
+          "pdfUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/6.pdf",
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/6.png",
+          "alt": "PDF Document 6"
+        },
+        {
+          "pdfUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/7.pdf",
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/7.png",
+          "alt": "PDF Document 7"
+        },
+        {
+          "pdfUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/8.pdf",
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/8.png",
+          "alt": "PDF Document 8"
+        },
+        {
+          "pdfUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/z-3x3_8reasons_SM.pdf",
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/z-8 Reasons_Natoli.png",
+          "alt": "3x3 Reasons Summary PDF"
+        },
+        {
+          "pdfUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/z8 Reasons_All Slides.pdf",
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/Final Post_8 Reasons/z8.png",
+          "alt": "All Slides PDF"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Proposal: Andover Eye Institute",
+      "subtitle": "Digital Marketing",
+      "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/videos/step_5_video/5.mp4",
+      "slides": [
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_1/Content Marketing Funnel-O.png", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_2/Book Now-1.jpg", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_3/Book Now-2.jpg", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_4/Download Whitepaper-LinkedIn-1.jpg", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_5/Sign-Up-Webinar-1.jpg", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_6/ga-5.png", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_6/TBH Table Content BG Template2.png", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_8/ga-6.png", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_9/ga-7.png", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_10/ga-4.png", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_11/Google Display Ads - Full - 1.png", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_12/ga-3.png", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_13/ga-2.png", "alt": "Digital Marketing" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_14/ga-segments-1.png", "alt": "Digital Marketing" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Proposal: Andover Eye Institute",
+      "subtitle": "Project Management & Timeline Projections",
+      "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step6/videos/step_6_video/6.mp4",
+      "slides": [
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/MainWide-75.jpg", "alt": "Consultation Slide 1" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/Opening Day Social Media Post.png", "alt": "Consultation Slide 2" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/Opening Day Story Post.png", "alt": "Consultation Slide 3" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8573.jpg", "alt": "Consultation Slide 4" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Download Proposal PDF: Andover Eye Institute",
+      "subtitle": "Download Proposal PDF",
+      "pdfUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step9/pdf/final-quote.pdf",
+      "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step7/videos/step_7_video/7.mp4"
+    }
+  ]
+}

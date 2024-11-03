@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect to Home</title>
+</head>
+<body>
+  <h1>Redirecting to Home Page...</h1>
+  
+  <script>
+    // Set the homepage URL
+    const homeUrl = '/'; // Update this to your actual homepage URL if necessary
+
+    // Function to redirect to the home page
+    function redirectToHome() {
+      window.location.href = homeUrl;
+    }
+
+    // Loop to redirect every 5 seconds (5000 milliseconds)
+    setInterval(redirectToHome, 5000); // Adjust the interval time as needed
+  </script>
+</body>
+</html>

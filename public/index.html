@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="TBH Digital Solutions Project Proposal Portal" />
+    <meta name="keywords" content="TBH Digital Solutions, Project Proposal Portal, Web Development, React, TailwindCSS" />
+    <meta name="author" content="TBH Digital Solutions" />
+
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="TBH Digital Solutions Project Proposal Portal" />
+    <meta property="og:description" content="Get your detailed project proposal breakdown step by step." />
+    <meta property="og:image" content="https://tbhdigitalsolutions.com/images/og-image.jpg" />
+    <meta property="og:url" content="https://tbhdigitalsolutions.com" />
+
+    <!-- Twitter Card for better social sharing -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TBH Digital Solutions Project Proposal Portal" />
+    <meta name="twitter:description" content="Get your detailed project proposal breakdown step by step." />
+    <meta name="twitter:image" content="https://tbhdigitalsolutions.com/images/twitter-image.jpg" />
+
+    <!-- SEO & Social Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Content-Security-Policy -->
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; 
+                  script-src 'self' 'unsafe-inline' https://apis.google.com; 
+                  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                  font-src 'self' https://fonts.gstatic.com; 
+                  img-src 'self' https://storage.googleapis.com https://tbhdigitalsolutions.com; 
+                  media-src 'self' https://storage.googleapis.com;" />
+
+    <!-- Schema.org for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "TBH Digital Solutions Project Proposal Portal",
+        "url": "https://tbhdigitalsolutions.com",
+        "description": "Get your detailed project proposal breakdown step by step.",
+        "author": {
+          "@type": "Organization",
+          "name": "TBH Digital Solutions"
+        }
+      }
+    </script>
+
+    <title>TBH Digital Solutions Project Proposal Portal</title>
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" href="https://tbhdigitalsolutions.com/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tbhdigitalsolutions.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tbhdigitalsolutions.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tbhdigitalsolutions.com/favicon-16x16.png">
+
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="%PUBLIC_URL%/index.css" rel="stylesheet" />
+
+    <!-- Dark Mode Detection Script -->
+    <script>
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+  </head>
+  <body class="bg-soft-black text-off-white font-newsreader dark:bg-bg-dark dark:text-primary-dark">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Main React Root Element -->
+    <div id="root"></div>
+
+    <!-- Main JS File -->
+    <script src="%PUBLIC_URL%/static/js/bundle.js" defer></script>
+  </body>
+</html>

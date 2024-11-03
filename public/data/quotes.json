@@ -1,0 +1,272 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "title": "Proposal Overview",
+      "description": "Welcome to the Andover Eye Institute proposal. This proposal offers a comprehensive overview tailored to meet your digital needs.",
+      "buttonText": "View Proposal",
+      "videoUrl": "/assets/videos/proposal_overview.mp4",
+      "filesUrl": "/assets/step1/files"
+    },
+    {
+      "id": 2,
+      "title": "Website Build",
+      "totalCost": "$28,000",
+      "description": "Detailed breakdown of the Website Build process, covering un-gated, gated, and marketing pages, as well as additional services.",
+      "categories": [
+        {
+          "categoryTitle": "Main Website Pages (Un-Gated: 10 Pages)",
+          "items": [
+            { "label": "What to Expect Page", "price": "$1,000" },
+            { "label": "Trial-Specific Pages (Visit & Travel Information)", "price": "$1,000" },
+            { "label": "Active Clinical Trials Overview Page", "price": "$1,000" },
+            { "label": "Individual Clinical Trial Pages (Dry Eye)", "price": "$1,000" },
+            { "label": "Individual Clinical Trial Pages (Allergy Eye)", "price": "$1,000" },
+            { "label": "Individual Clinical Trial Pages (MKC)", "price": "$1,000" },
+            { "label": "SEO Mini Blog Pages (4 blogs)", "price": "$2,000" },
+            { "label": "FAQ & Q&A Page", "price": "$1,000" },
+            { "label": "Risk Assessment & Trial Participation Page", "price": "$1,000" },
+            { "label": "Clinical Trials Landing Page (for all trials)", "price": "$1,000" }
+          ],
+          "total": "$13,000"
+        },
+        {
+          "categoryTitle": "Gated Content Pages (7 Pages)",
+          "items": [
+            { "label": "Login/Registration Page", "price": "$1,500" },
+            { "label": "Gated Case Studies Page", "price": "$1,500" },
+            { "label": "Success Stories Page (Gated)", "price": "$1,500" },
+            { "label": "Incentivized Pre-Screening Page", "price": "$1,500" },
+            { "label": "Eligibility Criteria Page (Gated)", "price": "$1,500" },
+            { "label": "Content Hub/Resource Page (Gated)", "price": "$1,500" },
+            { "label": "Access Exclusive Articles, Testimonials, Case Studies (Gated)", "price": "$1,500" }
+          ],
+          "total": "$10,500"
+        },
+        {
+          "categoryTitle": "Marketing Pages for Individual Trials (Gated: 4 Pages)",
+          "items": [
+            { "label": "Clinical Trials Landing Page (For all trials)", "price": "$1,500" },
+            { "label": "Individual Clinical Trial Pages (Dry Eye)", "price": "$1,000" },
+            { "label": "Individual Clinical Trial Pages (Allergy Eye)", "price": "$1,000" },
+            { "label": "Individual Clinical Trial Pages (MKC)", "price": "$1,000" }
+          ],
+          "total": "$4,500"
+        }
+      ],
+      "additionalServices": [
+        {
+          "service": "Single Sign-On (SSO) Integration",
+          "description": "SSO integration for users via Google, Facebook, and corporate SSO.",
+          "included": true
+        },
+        {
+          "service": "Landing Page Optimization (CRO)",
+          "description": "Optimization services for landing pages to enhance conversion rates.",
+          "included": true
+        }
+      ],
+      "grandTotal": "$28,000",
+      "filesUrl": "/assets/step2/files/services_tools_list.csv"
+    },   
+    {
+      "id": 3,
+      "title": "CRM Setup",
+      "description": "Comprehensive CRM setup to optimize customer data management, lead capture, and automation.",
+      "features": [
+        {
+          "feature": "Sales Funnel Builder",
+          "description": "A tool designed to optimize the conversion process and capture leads efficiently.",
+          "setupFee": "$2,500",
+          "monthlyManagementFee": "$500"
+        },
+        {
+          "feature": "Centralized Data Management",
+          "description": "A unified view of customer data for personalized communication and efficient management of relationships.",
+          "setupFee": "$2,000",
+          "monthlyManagementFee": "$400"
+        },
+        {
+          "feature": "Lead Capture & Automated Follow-ups",
+          "description": "Tools for capturing leads through forms, ads, and campaigns with automated follow-up sequences.",
+          "setupFee": "$1,500",
+          "monthlyManagementFee": "$300"
+        },
+        {
+          "feature": "Email Campaign Automation",
+          "description": "Automated email sequences with tracking for opens, clicks, and conversions.",
+          "setupFee": "$2,000",
+          "monthlyManagementFee": "$500"
+        },
+        {
+          "feature": "Social Media Integration",
+          "description": "Seamless connection between CRM and social platforms like LinkedIn, Facebook, and Twitter for posting and tracking.",
+          "setupFee": "$1,500",
+          "monthlyManagementFee": "$400"
+        },
+        {
+          "feature": "HIPAA-Compliant Data Management",
+          "description": "Secure data storage and encrypted transfers, ensuring patient data protection.",
+          "setupFee": "$3,000",
+          "monthlyManagementFee": "$600"
+        },
+        {
+          "feature": "Real-time Dashboards",
+          "description": "Custom dashboards displaying KPIs such as lead generation, conversions, and email performance metrics.",
+          "setupFee": "$2,500",
+          "monthlyManagementFee": "$500"
+        },
+        {
+          "feature": "Appointment Scheduling for Phone & In-person Screenings",
+          "description": "Integrated scheduling tools for lead generation campaigns, allowing users to book screenings.",
+          "setupFee": "$2,000",
+          "monthlyManagementFee": "$450"
+        }
+      ],
+      "totals": {
+        "setupFeeRange": "$12,000 - $15,000",
+        "monthlyManagementFeeRange": "$2,500 - $3,750"
+      },
+      "additionalNotes": [
+        "Service Fees: Paid directly to providers such as Mailchimp, Twilio, and other platforms."
+      ],
+      "filesUrl": "/assets/step3/files/services_tools_list.csv"
+    },
+    {
+      "id": 4,
+      "title": "Content Creation & Social Media Management",
+      "description": "A breakdown of high-impact content creation and social media management services.",
+      "features": [
+        {
+          "feature": "High-impact Image Posts (40 still images)",
+          "description": "Engaging, high-quality visuals designed for campaigns on platforms like Instagram, LinkedIn, and Facebook.",
+          "setupFee": "$2,500",
+          "monthlyManagementFee": null
+        },
+        {
+          "feature": "Short-form Video Content (10 videos, 30 sec - 1 min)",
+          "description": "Educational, high-engagement short-form videos designed to quickly convey important information to targeted audiences.",
+          "setupFee": "$3,500",
+          "monthlyManagementFee": null
+        },
+        {
+          "feature": "Bulk Content Creation for IRB Submissions",
+          "description": "Production of bulk content (e.g., emails, brochures, ads) submitted to the IRB for approval in a single batch.",
+          "setupFee": "$5,500",
+          "serviceFee": "TBD (based on pre-negotiated fixed cost with IRB)",
+          "monthlyManagementFee": "$1,200"
+        },
+        {
+          "feature": "Social Media Strategy and Execution",
+          "description": "Development and execution of a strategic content calendar, with posting across multiple platforms, including analytics to track performance.",
+          "setupFee": "$3,000",
+          "monthlyManagementFee": "$1,500"
+        }
+      ],
+      "totals": {
+        "setupFees": "$14,500",
+        "monthlyManagementFees": "$2,700"
+      },
+      "additionalNotes": [
+        "Service fees depend on external agreements, such as IRB submission costs."
+      ],
+      "filesUrl": "/assets/step4/files/services_tools_list.csv"
+    },
+    {
+      "id": 5,
+      "title": "Digital Marketing",
+      "description": "A breakdown of digital marketing services to enhance online presence and target specific audiences.",
+      "features": [
+        {
+          "feature": "Google Analytics 4 (GA4)",
+          "description": "Tracks user behavior in real-time, including sessions, bounce rates, and conversions to improve campaign performance.",
+          "setupFee": "$2,500",
+          "serviceFee": "TBD (paid to Google)",
+          "monthlyManagementFee": "$500"
+        },
+        {
+          "feature": "Google Tag Manager (GTM)",
+          "description": "Manages website tags and event tracking (e.g., form submissions, video plays) without affecting website code.",
+          "setupFee": "$1,500",
+          "serviceFee": "TBD (paid to Google)",
+          "monthlyManagementFee": "$300"
+        },
+        {
+          "feature": "PPC & Meta Ads Campaigns",
+          "description": "Driving targeted traffic through paid ads on Google and Meta (Facebook/Instagram) with custom audience segmentation and keywords.",
+          "setupFee": "$3,000 per platform, per campaign",
+          "serviceFee": "TBD (paid directly to Google or Meta)",
+          "monthlyManagementFee": "$750 per platform, per campaign"
+        },
+        {
+          "feature": "CMP (Consent Management Platform) Implementation",
+          "description": "Setup of a CMP to manage user privacy preferences and consent to data collection, especially for cookies and tracking.",
+          "setupFee": "$2,000",
+          "serviceFee": "TBD (paid to CMP provider)",
+          "monthlyManagementFee": "$400"
+        },
+        {
+          "feature": "Geo-targeting & Geofencing",
+          "description": "Reaching the right audience at the right time based on their geographic location.",
+          "setupFee": "$3,500",
+          "serviceFee": "TBD (paid to geo-targeting provider)",
+          "monthlyManagementFee": "$1,000"
+        }
+      ],
+      "totals": {
+        "setupFees": "$12,500",
+        "monthlyManagementFees": "$2,950"
+      },
+      "additionalNotes": [
+        "Service fees are paid directly to providers, such as Google and Meta, based on selected platforms."
+      ],
+      "filesUrl": "/assets/step5/files/services_tools_list.csv"
+    },
+    {
+      "id": 6,
+      "title": "Project Management & Timeline Projections",
+      "description": "A structured approach to managing the project with milestones, coordination, and a phased timeline.",
+      
+      "KeyFocusAreas": [
+        { "term": "Milestone Tracking", "description": "Keeping the project on schedule by setting clear deadlines for each phase." },
+        { "term": "Team Coordination", "description": "Ensuring smooth communication and collaboration between all stakeholders." },
+        { "term": "Progress Meetings", "description": "Holding regular meetings to provide updates, resolve issues, and align everyone on project goals." }
+      ],
+    
+      "CoreProjectServices": [
+        { "service": "Agile Methodology", "description": "Using Agile sprint cycles to manage tasks efficiently, adapt to changes, and deliver incremental progress." },
+        { "service": "Phase-based Delivery", "description": "Dividing the project into clear phases with specific deliverables for each phase." },
+        { "service": "Risk Mitigation Strategy", "description": "Identifying potential challenges and developing mitigation strategies to avoid delays and cost overruns." },
+        { "service": "Resource Allocation & Budget Tracking", "description": "Monitoring resource utilization and tracking the budget to ensure that the project stays on time and within budget." }
+      ],
+    
+      "ProjectTimeline": [
+        { "phase": "Phase 1", "duration": "Month 1", "tasks": "Website and Content Creation." },
+        { "phase": "Phase 2", "duration": "Month 2", "tasks": "CRM Setup and Marketing Campaign Launch." },
+        { "phase": "Phase 3", "duration": "Month 3", "tasks": "Full Ads Rollout, Geo-targeting & Continuous Optimization." }
+      ],
+    
+      "ContractTerms": [
+        "Minimum engagement: 3 to 6 months, with rolling extensions based on performance and campaign success."
+      ],
+    
+      "buildPlan": [
+        { "duration": "1 month", "tasks": "Website build and content creation." },
+        { "duration": "1 month", "tasks": "CRM setup and marketing campaign setup." },
+        { "duration": "1 month", "tasks": "IRB review." }
+      ],
+    
+      "adsCommitment": "Ads start after approval and setup, running for 3 months (minimum commitment).",
+      "ganttChartImage": "/assets/step6/images/step_6_image_1/ProjectTimeline-AEI.png",
+      "filesUrl": "/assets/step6/files/services_tools_list.csv"
+    },    
+    {
+      "id": 7,
+      "title": "Download Final Quote",
+      "description": "Thank you, Andover Eye Institute. Your proposal is available for download.",
+      "buttonText": "Download Proposal",
+      "pdfUrl": "/assets/pdf/final-proposal.pdf",
+      "filesUrl": "/assets/step9/files"
+    }
+  ]
+}

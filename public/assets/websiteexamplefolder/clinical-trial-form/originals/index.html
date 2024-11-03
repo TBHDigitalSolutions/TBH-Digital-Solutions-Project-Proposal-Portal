@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Capture Form: Dry Eye & Allergy Trials</title>
+
+  <!-- Linking to External CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Main Container -->
+  <div class="container">
+    <form id="multiStepForm" novalidate>
+      <!-- Step 1: Introduction & Consent Disclosure -->
+      <div class="step active" id="step-1">
+        <h1>Welcome to the Clinical Trial Pre-Screening Form</h1>
+        <p>Thank you for your interest in participating in our clinical trials. Please review the following important information:</p>
+        <ul>
+          <li>Your information will be used solely to determine your eligibility for this clinical trial.</li>
+          <li>Completing this form does not guarantee enrollment. A member of our research team will contact you with next steps if you qualify.</li>
+          <li>All collected information will be stored securely and handled in accordance with HIPAA and GDPR guidelines.</li>
+        </ul>
+        <p>By clicking Next, you confirm that you understand the purpose of this form and consent to the collection of your information.</p>
+        <label><input type="checkbox" required> I agree to proceed with the pre-screening.</label>
+        <div class="step-buttons">
+          <button type="button" onclick="nextStep(1)">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Participant Contact Information -->
+      <div class="step" id="step-2">
+        <h2>Participant Contact Information</h2>
+        <label>First Name: <input type="text"></label>
+        <label>Last Name: <input type="text"></label>
+        <label>Date of Birth: <input type="date"></label>
+        <label>Phone Number: <input type="tel"></label>
+        <label>Email Address: <input type="email"></label>
+        <p>Preferred Method of Contact:</p>
+        <label><input type="radio" name="contact-method" value="phone"> Phone Call</label>
+        <label><input type="radio" name="contact-method" value="sms"> SMS Text</label>
+        <label><input type="radio" name="contact-method" value="email"> Email</label>
+        <div class="step-buttons">
+          <button type="button" onclick="prevStep(2)">Previous</button>
+          <button type="button" onclick="nextStep(2)">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Eligibility Questions -->
+      <div class="step" id="step-3">
+        <h2>Eligibility Questions (Both Trials)</h2>
+        <p>Do you have a history of dry eye symptoms (e.g., redness, burning, or irritation)?</p>
+        <label><input type="radio" name="dry-eye" value="yes"> Yes</label>
+        <label><input type="radio" name="dry-eye" value="no"> No</label>
+
+        <p>Do you experience seasonal or environmental allergies?</p>
+        <label><input type="radio" name="allergies" value="yes"> Yes</label>
+        <label><input type="radio" name="allergies" value="no"> No</label>
+
+        <p>Are you currently taking any medications for your condition?</p>
+        <label><input type="radio" name="medications" value="yes"> Yes</label>
+        <label><input type="radio" name="medications" value="no"> No</label>
+
+        <p>Do you have any known allergies to medications or eye drops?</p>
+        <label><input type="radio" name="med-allergies" value="yes"> Yes</label>
+        <label><input type="radio" name="med-allergies" value="no"> No</label>
+        <div class="step-buttons">
+          <button type="button" onclick="prevStep(3)">Previous</button>
+          <button type="button" onclick="nextStep(3)">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Trial-Specific Questions -->
+      <div class="step" id="step-4">
+        <h2>Trial-Specific Questions</h2>
+        <div id="dry-eye-questions">
+          <h3>Dry Eye Trial-Specific Questions</h3>
+          <p>How long have you experienced dry eye symptoms?</p>
+          <label><input type="radio" name="dry-eye-duration" value="less-3"> Less than 3 months</label>
+          <label><input type="radio" name="dry-eye-duration" value="3-6"> 3-6 months</label>
+          <label><input type="radio" name="dry-eye-duration" value="more-6"> More than 6 months</label>
+          <p>Have you been diagnosed with chronic dry eye by a healthcare provider?</p>
+          <label><input type="radio" name="chronic-dry-eye" value="yes"> Yes</label>
+          <label><input type="radio" name="chronic-dry-eye" value="no"> No</label>
+        </div>
+
+        <div class="step-buttons">
+          <button type="button" onclick="prevStep(4)">Previous</button>
+          <button type="button" onclick="nextStep(4)">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 5: Marketing Opt-In -->
+      <div class="step" id="step-5">
+        <h2>Optional Marketing Opt-In</h2>
+        <p>Would you like to receive updates on future trials and research?</p>
+        <label><input type="radio" name="marketing-opt-in" value="yes"> Yes</label>
+        <label><input type="radio" name="marketing-opt-in" value="no"> No</label>
+        <div class="step-buttons">
+          <button type="button" onclick="prevStep(5)">Previous</button>
+          <button type="button" onclick="nextStep(5)">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 6: Review & Submit -->
+      <div class="step" id="step-6">
+        <h2>Review & Submit</h2>
+        <p>Please review your responses before submitting.</p>
+        <div id="summary"></div>
+        <label><input type="checkbox"> I confirm that the information I have provided is accurate.</label>
+        <label><input type="checkbox"> I understand that submitting this form does not guarantee enrollment in the clinical trial.</label>
+        <div class="step-buttons">
+          <button type="button" onclick="prevStep(6)">Previous</button>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Linking JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
