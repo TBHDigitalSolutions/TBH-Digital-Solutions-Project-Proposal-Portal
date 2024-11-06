@@ -3,20 +3,18 @@
 import React, { useState } from 'react';
 import TableView from '../TableView';
 import MarkdownView from '../MarkdownView';
-import Modal from '../common/Modal';
+import Modal2 from '../common/Modal2'; // Import Modal2 for handling HTML
 import withData from '../../hoc/withData';
-import { logEvent } from '../firebaseLogging'; // Import logging function
-import { useUser } from '../../UserContext'; // Import user context
+import { logEvent } from '../firebaseLogging';
+import { useUser } from '../../UserContext';
 
 const Slide2QuoteTemplate = ({ data }) => {
-  const { userId } = useUser(); // Retrieve the userId from context
+  const { userId } = useUser();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [htmlContent, setHtmlContent] = useState('');
 
-  // Destructure data properties
   const { title, description, categories = [], additionalServices = [], grandTotal } = data || {};
 
-  // Toggle modal visibility and log the event
   const toggleModal = async () => {
     if (!isModalOpen) {
       try {
@@ -24,19 +22,19 @@ const Slide2QuoteTemplate = ({ data }) => {
         if (!response.ok) throw new Error('Failed to load the HTML document.');
         const text = await response.text();
         setHtmlContent(text);
-        logEvent('open_modal', { userId, slide: 2, action: 'view_explanation' }); // Log modal open with userId
+        logEvent('open_modal', { userId, slide: 2, action: 'view_explanation' });
       } catch (error) {
         console.error('Error loading HTML:', error);
         alert('Could not load the document. Please try again later.');
       }
     } else {
-      logEvent('close_modal', { userId, slide: 2, action: 'view_explanation' }); // Log modal close with userId
+      logEvent('close_modal', { userId, slide: 2, action: 'view_explanation' });
     }
     setIsModalOpen(!isModalOpen);
   };
 
   const handleButtonClick = () => {
-    logEvent('view_explanation_button_click', { userId, slide: 2 }); // Log button click with userId
+    logEvent('view_explanation_button_click', { userId, slide: 2 });
     toggleModal();
   };
 
@@ -65,7 +63,13 @@ const Slide2QuoteTemplate = ({ data }) => {
       {additionalServices.length > 0 && (
         <div className="mt-8">
           <h3 className="text-2xl font-semibold text-soft-black dark:text-off-white mb-4">Additional Services</h3>
-          <MarkdownView content={additionalServices.map(service => `- ${service.service}: ${service.description}`).join("\n")} />
+          <ul className="list-disc ml-5 text-text-dark dark:text-text-light">
+            {additionalServices.map((service, index) => (
+              <li key={index} className="mb-2">
+                <span className="font-bold">{service.service}:</span> {service.description}
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 
@@ -74,17 +78,17 @@ const Slide2QuoteTemplate = ({ data }) => {
         <h3 className="text-2xl font-semibold text-soft-black dark:text-off-white">Overall Total: {grandTotal}</h3>
       </div>
 
-      {/* Updated Button */}
+      {/* Explanation Button */}
       <button
         onClick={handleButtonClick}
-        className="text-logo-blue text-xl text-underline mt-6 hover:text-hover-blue transition-colors"
+        className="text-logo-blue text-xl underline mt-6 hover:text-hover-blue transition-colors"
       >
         Here is why you need these pages
       </button>
 
-      {/* Modal for Viewing HTML Content */}
+      {/* Modal2 for Viewing HTML Content */}
       {isModalOpen && (
-        <Modal isOpen={isModalOpen} onClose={toggleModal}>
+        <Modal2 isOpen={isModalOpen} onClose={toggleModal}>
           <div className="p-8 bg-off-white dark:bg-soft-black rounded-lg shadow-lg max-w-2xl mx-auto">
             <h3 className="text-3xl font-aldrich font-bold mb-6 text-soft-black dark:text-off-white">Why You Need These Pages</h3>
             <div className="overflow-y-auto max-h-[80vh]">
@@ -97,7 +101,7 @@ const Slide2QuoteTemplate = ({ data }) => {
               Close
             </button>
           </div>
-        </Modal>
+        </Modal2>
       )}
     </div>
   );

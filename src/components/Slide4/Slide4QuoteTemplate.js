@@ -2,48 +2,46 @@
 
 import React, { useState, useEffect } from 'react';
 import TableView from '../TableView';
-import Modal from '../common/Modal';
+import Modal2 from '../common/Modal2'; // Use Modal2 for HTML content handling
 import withData from '../../hoc/withData';
-import { logEvent } from '../firebaseLogging'; // Import logging function
-import { useUser } from '../../UserContext'; // Import user context for userId
+import { logEvent } from '../firebaseLogging';
+import { useUser } from '../../UserContext';
 
 const Slide4QuoteTemplate = ({ data }) => {
+  const { userId } = useUser();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [htmlContent, setHtmlContent] = useState('');
-  const { userId } = useUser(); // Get userId from context
+  const [htmlError, setHtmlError] = useState(null);
 
-  // Destructure data properties
   const { title, description, features = [], totals = {}, additionalNotes = [] } = data || {};
 
-  // Log page view on component mount
   useEffect(() => {
     if (userId) {
       logEvent('view_page', { page: 'Slide 4 Quote', userId });
     }
   }, [userId]);
 
-  // Toggle modal visibility and log events
-  const toggleModal = async () => {
-    if (!isModalOpen) {
-      try {
-        const response = await fetch('/assets/html/contents-creation-services.html');
-        if (!response.ok) throw new Error('Failed to load the HTML document.');
-        const text = await response.text();
-        setHtmlContent(text);
-        logEvent('view_content_services_modal', { userId }); // Log modal open with userId
-      } catch (error) {
-        console.error('Error loading HTML:', error);
-        alert('Could not load the document. Please try again later.');
-      }
-    } else {
-      logEvent('close_content_services_modal', { userId }); // Log modal close
+  const fetchHtmlContent = async () => {
+    try {
+      const response = await fetch('/assets/html/contents-creation-services.html');
+      if (!response.ok) throw new Error('Failed to load the HTML document.');
+      const text = await response.text();
+      setHtmlContent(text);
+      setHtmlError(null);
+      logEvent('view_content_services_modal', { userId });
+    } catch (error) {
+      console.error('Error loading HTML:', error);
+      setHtmlError('Could not load the document. Please try again later.');
     }
-    setIsModalOpen(!isModalOpen);
   };
 
-  // Log feature clicks with userId
-  const handleFeatureClick = (feature) => {
-    logEvent('view_feature_detail', { feature, userId });
+  const toggleModal = () => {
+    if (!isModalOpen) {
+      fetchHtmlContent();
+    } else {
+      logEvent('close_content_services_modal', { userId });
+    }
+    setIsModalOpen(!isModalOpen);
   };
 
   return (
@@ -59,14 +57,7 @@ const Slide4QuoteTemplate = ({ data }) => {
         <h3 className="text-2xl font-semibold font-aldrich text-soft-black dark:text-off-white mb-4">Content Creation Features</h3>
         <TableView
           data={features.map(({ feature, description, setupFee, serviceFee, monthlyManagementFee }) => ({
-            Feature: (
-              <button
-                onClick={() => handleFeatureClick(feature)}
-                className="text-logo-blue underline hover:text-hover-blue transition-colors"
-              >
-                {feature}
-              </button>
-            ),
+            Feature: feature, // Removed the blue underline styling here
             Description: description,
             "Setup Fee": setupFee || "-",
             "Service Fee": serviceFee || "-",
@@ -78,8 +69,8 @@ const Slide4QuoteTemplate = ({ data }) => {
       {/* Totals Breakdown */}
       <div className="mb-8">
         <h3 className="text-2xl font-semibold font-aldrich text-soft-black dark:text-off-white">Cost Breakdown</h3>
-        <p className="text-text-dark dark:text-text-light mt-2">Total Setup Fees: {totals.setupFees || "N/A"}</p>
-        <p className="text-text-dark dark:text-text-light">Monthly Management Fees: {totals.monthlyManagementFees || "N/A"}</p>
+        <p className="text-lg text-text-dark dark:text-text-light mt-2">Total Setup Fees: {totals.setupFees || "N/A"}</p>
+        <p className="text-lg text-text-dark dark:text-text-light">Monthly Management Fees: {totals.monthlyManagementFees || "N/A"}</p>
       </div>
 
       {/* Additional Notes */}
@@ -87,10 +78,10 @@ const Slide4QuoteTemplate = ({ data }) => {
         <h3 className="text-2xl font-semibold font-aldrich text-soft-black dark:text-off-white mb-4">Additional Notes</h3>
         {additionalNotes.length > 0 ? (
           additionalNotes.map((note, index) => (
-            <p key={index} className="text-text-dark dark:text-text-light">- {note}</p>
+            <p key={index} className="text-lg text-text-dark dark:text-text-light">- {note}</p>
           ))
         ) : (
-          <p className="text-text-dark dark:text-text-light">No additional notes available.</p>
+          <p className="text-lg text-text-dark dark:text-text-light">No additional notes available.</p>
         )}
       </div>
 
@@ -102,14 +93,16 @@ const Slide4QuoteTemplate = ({ data }) => {
         Available Content and Video Services
       </button>
 
-      {/* Modal for Viewing HTML Content */}
+      {/* Modal2 for Viewing HTML Content */}
       {isModalOpen && (
-        <Modal isOpen={isModalOpen} onClose={toggleModal}>
-          <div className="p-8 bg-off-white dark:bg-soft-black rounded-lg shadow-lg max-w-2xl mx-auto">
+        <Modal2 isOpen={isModalOpen} onClose={toggleModal}>
+          <div className="p-8 bg-off-white dark:bg-soft-black rounded-lg shadow-lg max-w-2xl mx-auto overflow-y-auto max-h-[80vh]">
             <h3 className="text-3xl font-aldrich font-bold mb-6 text-soft-black dark:text-off-white">Available Content and Video Services</h3>
-            <div className="overflow-y-auto max-h-[80vh]">
+            {htmlError ? (
+              <p className="text-red-500 dark:text-red-400">{htmlError}</p>
+            ) : (
               <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
-            </div>
+            )}
             <button
               onClick={toggleModal}
               className="mt-6 text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 transition-colors"
@@ -117,7 +110,7 @@ const Slide4QuoteTemplate = ({ data }) => {
               Close
             </button>
           </div>
-        </Modal>
+        </Modal2>
       )}
     </div>
   );

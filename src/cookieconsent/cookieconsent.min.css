@@ -1,0 +1,69 @@
+/* cookieconsent.min.css */
+
+/* Popup container */
+.cc-window {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: #000;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    text-align: center;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+/* Popup text */
+.cc-message {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Button styles */
+.cc-btn {
+    display: inline-block;
+    background: #f1d600;
+    /* Button background color */
+    color: #000;
+    /* Button text color */
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.cc-btn:hover {
+    background: #e5c200;
+    /* Darker shade for hover */
+}
+
+/* Decline button (optional if included) */
+.cc-decline {
+    background: #ccc;
+    /* Decline button background */
+    color: #333;
+    /* Decline button text color */
+}
+
+/* Decline button hover */
+.cc-decline:hover {
+    background: #bbb;
+    /* Darker shade for decline button hover */
+}
+
+/* Privacy link */
+.cc-link {
+    color: #f1d600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cc-link:hover {
+    color: #e5c200;
+}

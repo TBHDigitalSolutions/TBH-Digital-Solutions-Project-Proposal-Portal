@@ -65,7 +65,7 @@
           "description": "Optimization services for landing pages to enhance conversion rates.",
           "included": true
         }
-      ],
+      ], 
       "grandTotal": "$28,000",
       "filesUrl": "/assets/step2/files/services_tools_list.csv"
     },   
@@ -133,7 +133,7 @@
       "filesUrl": "/assets/step3/files/services_tools_list.csv"
     },
     {
-      "id": 4,
+      "id": 4, 
       "title": "Content Creation & Social Media Management",
       "description": "A breakdown of high-impact content creation and social media management services.",
       "features": [

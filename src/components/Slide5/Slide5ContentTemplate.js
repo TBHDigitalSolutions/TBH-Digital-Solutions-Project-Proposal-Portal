@@ -1,36 +1,33 @@
 // src/components/Slide5/Slide5ContentTemplate.js
 
 import React, { useState, useEffect } from 'react';
-import Carousel from '../common/Carousel';
-import VideoPlayer from '../VideoPlayer';
+import ThumbnailCarousel from '../common/ThumbnailCarousel';
 import Modal from '../common/Modal';
-import ModalCarousel from '../common/ModalCarousel';
+import VideoPlayer from '../VideoPlayer';
 import withData from '../../hoc/withData';
-import { logEvent } from '../firebaseLogging'; // Import the logging function
-import { useUser } from '../../UserContext'; // Import user context for userId
+import { logEvent } from '../firebaseLogging';
+import { useUser } from '../../UserContext';
 
 const Slide5ContentTemplate = ({ data }) => {
+  const { userId } = useUser();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-  const { userId } = useUser(); // Get userId from context
+  const [modalSlides, setModalSlides] = useState([]);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const { title, description, videoUrl, slides } = data || {};
 
-  // Log page view on component mount
+  // Log initial page view
   useEffect(() => {
-    if (userId) {
-      logEvent('view_page', { page: 'Slide 5 Content', userId });
-    }
+    if (userId) logEvent('view_page', { page: 'Slide 5 Content', userId });
   }, [userId]);
 
-  // Log video play event with userId
-  const handleVideoPlay = () => {
-    logEvent('play_video', { videoTitle: title, userId });
-  };
+  // Log video play event
+  const handleVideoPlay = () => logEvent('play_video', { videoTitle: title, userId });
 
-  // Open modal and log the image click event
+  // Open modal for carousel items
   const openModal = (index) => {
-    setActiveSlideIndex(index);
+    setModalSlides(slides);
+    setActiveIndex(index);
     setIsModalOpen(true);
     logEvent('view_image_modal', { imageIndex: index, userId });
   };
@@ -41,25 +38,25 @@ const Slide5ContentTemplate = ({ data }) => {
     logEvent('close_image_modal', { userId });
   };
 
-  // Log each slide view in the modal carousel with userId
+  // Log each slide view in modal carousel
   const handleSlideChange = (newIndex) => {
-    setActiveSlideIndex(newIndex);
+    setActiveIndex(newIndex);
     logEvent('view_carousel_slide', { slideIndex: newIndex, userId });
   };
 
   if (!data) return <div className="text-center text-logo-blue">Loading...</div>;
 
   return (
-    <div className="p-6 bg-off-white dark:bg-soft-black rounded-lg shadow-lg max-w-[90%] mx-auto mt-6 flex flex-col justify-center items-center">
+    <div className="p-6 bg-off-white dark:bg-soft-black rounded-lg shadow-lg max-w-[90%] mx-auto mt-6 flex flex-col items-center">
       
       {/* Title */}
-      <h2 className="text-3xl font-aldrich font-bold text-center text-soft-black dark:text-off-white mb-2 drop-shadow-lg">
+      <h2 className="text-3xl font-bold text-center text-soft-black dark:text-off-white mb-2 drop-shadow-lg">
         {title}
       </h2>
 
       {/* Description */}
       {description && (
-        <p className="text-lg font-newsreader text-center text-text-dark dark:text-text-light mb-6">
+        <p className="text-lg text-center text-text-dark dark:text-text-light mb-6">
           {description}
         </p>
       )}
@@ -79,7 +76,10 @@ const Slide5ContentTemplate = ({ data }) => {
           <h3 className="text-xl font-semibold text-center text-soft-black dark:text-off-white mb-4">
             Feature Visuals
           </h3>
-          <Carousel slides={slides} onImageClick={openModal} />
+          <ThumbnailCarousel
+            thumbnails={slides}
+            onThumbnailClick={(index) => openModal(index)}
+          />
         </div>
       ) : (
         <p className="text-center mt-4 text-gray-500 dark:text-gray-300">No visuals available for this step.</p>
@@ -87,14 +87,13 @@ const Slide5ContentTemplate = ({ data }) => {
 
       {/* Modal for Enlarged Carousel View */}
       {isModalOpen && (
-        <Modal isOpen={isModalOpen} onClose={closeModal}>
-          <ModalCarousel 
-            slides={slides} 
-            activeIndex={activeSlideIndex} 
-            onClose={closeModal} 
-            onSlideChange={handleSlideChange} 
-          />
-        </Modal>
+        <Modal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          slides={modalSlides}
+          activeIndex={activeIndex}
+          onSlideChange={handleSlideChange}
+        />
       )}
     </div>
   );

@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEI - Project Proposal</title>
+  <style>
+    /* Font Imports */
+    @import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;700&display=swap');
+
+    /* Font Definitions */
+    @font-face {
+      font-family: 'Aldrich';
+      src: url('/path-to-fonts/aldrich-regular-webfont.woff2') format('woff2'),
+        url('/path-to-fonts/aldrich-regular-webfont.woff') format('woff'),
+        url('/path-to-fonts/Aldrich-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'SovjetBoxBold';
+      src: url('/path-to-fonts/sovjetboxbd_v0_9-webfont.woff') format('woff'),
+        url('/path-to-fonts/SovjetBoxBd_v0_9.otf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    /* Base Reset */
+    * {
+      box-sizing: border-box;
+      margin: 20;
+      padding: 50;
+    }
+
+    body {
+      font-family: 'Newsreader', serif;
+      color: #2D2D2D;
+      background-color: #f2f2f2;
+      line-height: 1.8;
+      font-size: 16px;
+      /* Base font size */
+    }
+
+    /* Wrapper */
+    .content-wrapper {
+      padding: 60px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 80, 158, 0.5);
+    }
+
+    /* Header Section */
+    #company-header.header-section {
+      display: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #D7DBDD;
+      padding: 20px;
+      padding-bottom: 10px;
+      color: #2D2D2D;
+      border-bottom: 2px solid #D9EAF4;
+      box-shadow: 0 4px 10px rgba(0, 80, 158, 0.8);
+      position: relative;
+      text-align: center;
+    }
+
+    .header-company-name {
+      font-family: 'Aldrich', sans-serif;
+      font-size: 30px;
+      color: #00509E;
+      margin: 0;
+    }
+
+    .header-contact-info {
+      font-size: 18px;
+      color: #2D2D2D;
+      margin-top: 5px;
+    }
+
+    .header-contact-info a {
+      color: #00509E;
+      text-decoration: none;
+    }
+
+    .header-contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .header-prepared-by {
+      font-size: 16px;
+      position: relative;
+      bottom: 10px;
+      right: 20px;
+      color: #2D2D2D;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .content-date {
+      font-family: 'Aldrich', sans-serif;
+      font-size: 19px;
+      color: #00509E;
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    /* Headings */
+    h1,
+    h2,
+    h3 {
+      font-family: 'Aldrich', sans-serif;
+      color: #00509E;
+      text-align: center;
+      margin: 1.4rem 0;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 25px;
+      border-bottom: 2px solid #D9EAF4;
+      padding-bottom: 0.6rem;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin: 0.8rem 0.8rem;
+      text-align: left;
+    }
+
+    /* Section Titles */
+    .section-intro-title,
+    .section-proposal-title,
+    .section-website-build-title,
+    .section-gated-content-title,
+    .section-marketing-title,
+    .cost-breakdown-summary-title,
+    .overall-total-title,
+    .additional-services-title {
+      font-size: 20px;
+      color: #00509E;
+      font-family: 'Aldrich', sans-serif;
+      border-bottom: 2px solid #D9EAF4;
+      padding-bottom: 1rem;
+    }
+
+    /* Paragraph and List Styling */
+    p,
+    li {
+      font-size: 16px;
+      color: #2D2D2D;
+      line-height: 1.8;
+      margin-bottom: 1em;
+    }
+
+    ul,
+    .table-of-contents-list {
+      padding-left: 40px;
+      margin: 0;
+    }
+
+    ul li,
+    .table-of-contents-list li {
+      list-style-type: disc;
+      margin: 5px 0;
+      padding-left: 5px;
+    }
+
+    /* Section Container Styling */
+    .section-container,
+    .service-section,
+    .timeline,
+    .contract-terms,
+    .benefits-list,
+    .next-steps,
+    .gated-content-section,
+    .marketing-pages-section,
+    .website-build-summary,
+    .section-total-cost,
+    .section-timeline {
+      background-color: #FFFFFF;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0, 80, 158, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    /* Table Styling */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: .4rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: .4rem 0;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 5px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #00509E;
+      color: white;
+      font-family: 'SovjetBoxBold', sans-serif;
+      font-size: 13px;
+      padding: 5px;
+    }
+
+    td {
+      font-size: 13px;
+      color: #2D2D2D;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      background-color: #D7DBDD;
+      padding: 10px;
+      color: #2D2D2D;
+      border-top: 2px solid #D9EAF4;
+      font-size: 14px;
+    }
+
+    .footer-company {
+      font-family: 'Aldrich', sans-serif;
+      font-size: 16px;
+      color: #00509E;
+    }
+
+    .footer-website {
+      font-size: 12px;
+      color: #00509E;
+      margin-bottom: 10px;
+    }
+
+    .footer-disclaimer {
+      font-size: 12px;
+      color: #555555;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.2;
+      padding-top: 10px;
+      border-top: 1px solid #D9EAF4;
+      margin-top: 10px;
+    }
+
+    /* Button Styling */
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00509E;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 5px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #003F7D;
+      transform: translateY(-2px);
+    }
+
+    /* Highlight Text */
+    .highlight {
+      font-weight: bold;
+      color: #00509E;
+      font-size: 16px;
+    }
+
+    /* Print Styling */
+    @media print {
+      body {
+        font-size: 16px;
+      }
+
+      .header,
+      .footer {
+        width: 100%;
+        padding: 10px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      p,
+      li {
+        font-size: 16px;
+        line-height: 1.2;
+      }
+
+      .gantt-chart-container img {
+        max-width: 90%;
+        height: auto;
+        border: none;
+      }
+
+      /* Ensure tables stay within a single page */
+      table {
+        page-break-inside: avoid;
+      }
+
+      /* Prevent breaks immediately before and after headers */
+      h1,
+      h2,
+      h3 {
+        page-break-after: avoid;
+        page-break-before: avoid;
+      }
+
+      /* Additional utility class for ensuring full tables on a single page */
+      .table-wrapper {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header id="company-header" class="header-section">
+    <h1 class="header-company-name">TBH Digital Solutions</h1>
+    <p class="header-contact-info">636-566-1862 | <a href="https://TBHDigitalSolutions.com"
+        target="_blank">TBHDigitalSolutions.com</a> | St. Louis, MO</p>
+    <p class="header-prepared-by">Prepared by: Conor Hovis</p>
+  </header>
+
+  <div class="content-wrapper">
+    <h1 id="project-title" class="content-title">Andover Eye Institute - Project Proposal</h1>
+    <h3 class="content-date">Date: <em>October 24, 2024</em></h3>
+
+    <!-- Table of Contents -->
+    <h2 id="table-of-contents" class="content-table-of-contents">Table of Contents</h2>
+    <ol class="table-of-contents-list">
+      <li>Introduction</li>
+      <li>Proposal for Comprehensive Digital Solutions</li>
+      <li>Website Build</li>
+      <li>CRM Setup</li>
+      <li>Content Creation & Social Media Management</li>
+      <li>Digital Marketing</li>
+      <li>Comprehensive Cost Breakdown</li>
+      <li>Project Timeline</li>
+      <li>Contract Terms</li>
+      <li>Deliverables & Payment Structure</li>
+      <li>Project Benefits</li>
+      <li>Next Steps</li>
+    </ol>
+
+    <!-- Proposal Overview -->
+    <h2 class="section-proposal-title">Proposal for Comprehensive Digital Solutions</h2>
+    <div class="section-container proposal-overview">
+      <p>Starting from zero can be challenging, but once progress begins, it accelerates with impact. This proposal is designed
+      to address AEI’s immediate lead generation needs, enabling robust, sustainable growth through digital solutions. Our
+      approach provides a comprehensive digital ecosystem focused on converting leads into clinical trial participants through
+      strategic web development, CRM integration, content creation, and digital marketing.</p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Website Build Section -->
+    <section id="website-build" class="website-build-section">
+      <h2 class="section-website-build-title">1. Website Build</h2>
+      <div class="section-container website-scope">
+        <h3 class="section-scope-title">Scope of Work</h3>
+        <p>AEI’s website will serve as the core digital hub, with user-friendly design and conversion-focused pages that
+          guide users from awareness to engagement. This includes:</p>
+        <ul class="scope-list">
+          <li><strong>Main Website Pages:</strong> Key informational pages that establish AEI’s expertise and streamline
+            the user journey.</li>
+          <li><strong>Gated Content Pages:</strong> Secure sections designed to capture valuable lead information and
+            provide exclusive resources.</li>
+          <li><strong>Marketing Pages:</strong> Strategically optimized pages that focus on conversion through clear
+            calls-to-action.</li>
+        </ul>
+      </div>
+
+<div class="page-break"></div>
+
+      <!-- Table for Main Website Pages -->
+      <h3 class="section-main-website-title">Main Website Pages (Un-Gated: 10 Pages)</h3>
+      <div class="section-container main-website-section">
+        <div class="table-wrapper main-website-table">
+          <table class="website-build-table">
+            <thead>
+              <tr>
+                <th>Page Name</th>
+                <th>Purpose</th>
+                <th>Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <td>What to Expect</td>
+              <td>Establishes trust by outlining the participant journey, from first contact to trial involvement.</td>
+              <td>$1,000</td>
+              </tr>
+              <tr>
+                <td>Trial-Specific Pages (Visit & Travel Information)</td>
+                <td>Provides essential logistical details, including travel guidance and visitation protocols, to assist
+                  participants in planning their involvement.</td>
+                <td>$1,000</td>
+              </tr>
+              <tr>
+                <td>Active Clinical Trials Overview</td>
+                <td>Lists all ongoing clinical trials with brief descriptions, helping users explore and identify
+                  relevant
+                  options.</td>
+                <td>$1,000</td>
+              </tr>
+              <tr>
+                <td>Individual Clinical Trial Pages (Dry Eye)</td>
+                <td>Detailed page about the Dry Eye trial, including eligibility criteria and enrollment information.
+                </td>
+                <td>$1,000</td>
+              </tr>
+              <tr>
+                <td>Individual Clinical Trial Pages (Allergy Eye)</td>
+                <td>Provides comprehensive information about the Allergy Eye trial, guiding users through eligibility
+                  and
+                  trial objectives.</td>
+                <td>$1,000</td>
+              </tr>
+              <tr>
+                <td>Individual Clinical Trial Pages (MKC)</td>
+                <td>Contains details on the MKC trial, such as objectives, eligibility, and participation steps.</td>
+                <td>$1,000</td>
+              </tr>
+              <tr>
+                <td>SEO Mini Blog Pages (4 posts)</td>
+                <td>Educates users on topics related to clinical trials, improving search visibility and driving organic
+                  traffic.</td>
+                <td>$2,000</td>
+              </tr>
+              <tr>
+                <td>FAQ & Q&A Page</td>
+                <td>Addresses frequently asked questions to ease user concerns and streamline the onboarding process.
+                </td>
+                <td>$1,000</td>
+              </tr>
+              <tr>
+                <td>Risk Assessment & Trial Participation</td>
+                <td>Provides a transparent overview of trial risks and participation requirements to support informed
+                  decision-making.</td>
+                <td>$1,000</td>
+              </tr>
+              <tr>
+                <td>Clinical Trials Landing Page</td>
+                <td>A comprehensive landing page for trial options, directing users to individual trial pages based on
+                  interest.</td>
+                <td>$1,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Total Cost for Main Website Pages:</strong> $13,000</p>
+      </div>
+
+      <!-- Gated Content Pages -->
+      <h3 class="section-gated-content-title">Gated Content Pages (7 Pages)</h3>
+      <div class="cost-breakdown gated-content-section">
+        <p>These secure pages are designed to capture and retain user information through registration or login.</p>
+        <div class="table-wrapper gated-content-table">
+          <table class="website-build-table">
+            <thead>
+              <tr>
+                <th>Page Name</th>
+                <th>Purpose</th>
+                <th>Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Login/Registration</td>
+                <td>Secure portal for user access, ensuring AEI captures essential lead data while enhancing user
+                  engagement.
+                </td>
+                <td>$1,500</td>
+              </tr>
+              <tr>
+                <td>Gated Case Studies</td>
+                <td>Gives registered users access to detailed case studies that showcase successful outcomes, building
+                  trust
+                  and credibility.</td>
+                <td>$1,500</td>
+              </tr>
+              <tr>
+                <td>Success Stories (Gated)</td>
+                <td>Shares patient testimonials to build confidence in AEI's clinical trials, accessible only to
+                  registered
+                  users.</td>
+                <td>$1,500</td>
+              </tr>
+              <tr>
+                <td>Incentivized Pre-Screening</td>
+                <td>Offers incentives for completing pre-screening questions, fostering early engagement and lead
+                  qualification.</td>
+                <td>$1,500</td>
+              </tr>
+              <tr>
+                <td>Eligibility Criteria (Gated)</td>
+                <td>Displays in-depth eligibility requirements for trials, helping users self-assess suitability before
+                  proceeding.</td>
+                <td>$1,500</td>
+              </tr>
+              <tr>
+                <td>Content Hub/Resource (Gated)</td>
+                <td>A resource center with guides, articles, and educational materials for registered users, supporting
+                  continuous engagement.</td>
+                <td>$1,500</td>
+              </tr>
+              <tr>
+                <td>Exclusive Articles, Testimonials (Gated)</td>
+                <td>Provides access to premium content, including expert articles and patient stories, to keep users
+                  engaged
+                  and informed.</td>
+                <td>$1,500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Total Cost for Gated Content Pages:</strong> $10,500</p>
+      </div>
+
+<div class="page-break"></div>
+
+      <!-- Marketing Pages for Individual Trials -->
+      <h3 class="section-marketing-title">Marketing Pages for Individual Trials (Gated: 4 Pages)</h3>
+      <div class="cost-breakdown marketing-pages-section">
+        <p>These targeted pages are optimized for conversion, designed to generate interest in specific clinical trials.
+        </p>
+        <div class="table-wrapper marketing-pages-table">
+          <table class="website-build-table">
+            <thead>
+              <tr>
+                <th>Page Name</th>
+                <th>Purpose</th>
+                <th>Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Clinical Trials Landing Page (For all trials)</td>
+                <td>A central page for clinical trial campaigns, allowing users to view trial options and take action
+                  toward
+                  participation.</td>
+                <td>$1,500</td>
+              </tr>
+              <tr>
+                <td>Individual Clinical Trial Pages (Dry Eye)</td>
+                <td>Conversion-focused page for the Dry Eye trial, with content designed to guide users toward
+                  enrollment.
+                </td>
+                <td>$1,000</td>
+              </tr>
+              <tr>
+                <td>Individual Clinical Trial Pages (Allergy Eye)</td>
+                <td>Engages users with the Allergy Eye trial details, prompting them toward next steps for
+                  participation.</td>
+                <td>$1,000</td>
+              </tr>
+              <tr>
+                <td>Individual Clinical Trial Pages (MKC)</td>
+                <td>Dedicated page for the MKC trial, focused on attracting and converting potential participants.</td>
+                <td>$1,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Total Cost for Marketing Pages:</strong> $4,500</p>
+      </div>
+
+      <!-- Cost Breakdown Summary -->
+      <h3 class="cost-breakdown-summary-title">Website Build Cost Breakdown</h3>
+      <div class="cost-summary website-build-summary">
+        <p><strong>Total Cost for Main Website Pages:</strong> $13,000</p>
+        <p><strong>Total Cost for Gated Content Pages:</strong> $10,500</p>
+        <p><strong>Total Cost for Marketing Pages:</strong> $4,500</p>
+      </div>
+
+      <h3 class="overall-total-title">Overall Total for Website Build: $28,000</h3>
+      <h3 class="additional-services-title">Included Additional Services</h3>
+      <ul class="additional-services-list">
+        <li><strong>Single Sign-On (SSO) Integration:</strong> Allows users to log in using Google, Facebook, or
+          corporate
+          accounts.</li>
+        <li><strong>Landing Page Optimization (Conversion Rate Optimization - CRO):</strong> Increases conversion rates
+          through targeted optimization.</li>
+      </ul>
+    </section>
+  
+<div class="page-break"></div>
+
+  <section class="service-section">
+    <h2>2. CRM Setup</h2>
+
+    <h3>Scope of Work</h3>
+    <p>Our customized CRM solution for AEI centralizes patient and lead data, automates critical workflows, and enhances
+      communication across multiple channels. Designed specifically for clinical trial recruitment, this CRM setup
+      streamlines lead generation and patient engagement, helping AEI to recruit participants efficiently and compliantly.
+      By leveraging advanced data management and real-time analytics, AEI will improve operational efficiency and support
+      long-term growth.</p>
+
+    <h3>Core Components of the CRM Setup</h3>
+    <ul>
+      <li><strong>Lead Management & Multi-Channel Communication:</strong> Centralized lead tracking across platforms
+        (email, social media, and phone) ensures consistent and timely engagement.</li>
+      <li><strong>Automated Email Marketing & Performance Analytics:</strong> Tailored campaigns with tracking for opens,
+        clicks, and conversions to measure effectiveness and optimize outreach.</li>
+      <li><strong>HIPAA-Compliant Data Management:</strong> Secure storage and transfer processes protect patient data,
+        ensuring adherence to healthcare compliance standards.</li>
+      <li><strong>Real-Time Dashboards & KPIs:</strong> Customizable dashboards display conversion rates, lead engagement
+        metrics, and other performance indicators, enabling data-driven adjustments.</li>
+      <li><strong>Integrated Appointment Scheduling for Screenings:</strong> Allows patients to schedule phone and
+        in-person screenings, a key feature for lead qualification and conversion.</li>
+    </ul>
+
+    <h3>Expected Outcomes</h3>
+    <p>The CRM setup will deliver a comprehensive system for AEI, providing:</p>
+    <ul>
+      <li><strong>Enhanced Conversion Rates:</strong> Optimized lead management and multi-channel follow-up increase
+        conversions from lead to trial participant.</li>
+      <li><strong>Improved Patient Engagement:</strong> Tailored communication fosters stronger patient relationships,
+        increasing retention and recruitment success.</li>
+      <li><strong>Data Security & Compliance:</strong> HIPAA-compliant data management practices guarantee secure handling
+        of patient information.</li>
+      <li><strong>Valuable Insights for Strategic Decisions:</strong> Real-time dashboards and analytics provide
+        actionable data to refine outreach strategies and improve campaign ROI.</li>
+    </ul>
+
+    <p>This CRM implementation is designed to be the backbone of AEI’s recruitment strategy, seamlessly connecting website
+      interactions, social media engagement, and lead data into a unified system that maximizes efficiency and growth
+      potential.</p>
+
+<div class="page-break"></div>
+
+    <h3>CRM Features and Pricing Breakdown</h3>
+    <div class="cost-breakdown">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Description</th>
+              <th>Setup Fee</th>
+              <th>Monthly Management Fee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sales Funnel Builder</td>
+              <td>Streamlines the conversion process with tailored workflows, ensuring efficient lead nurturing and trial
+                enrollment.</td>
+              <td>$2,500</td>
+              <td>$500</td>
+            </tr>
+            <tr>
+              <td>Centralized Data Management</td>
+              <td>Aggregates all lead and patient data, enabling personalized communication and efficient relationship
+                management.</td>
+              <td>$2,000</td>
+              <td>$400</td>
+            </tr>
+            <tr>
+              <td>Lead Capture & Automated Follow-ups</td>
+              <td>Captures leads through forms and ads, with automated, customized follow-ups based on user behavior.</td>
+              <td>$1,500</td>
+              <td>$300</td>
+            </tr>
+            <tr>
+              <td>Email Campaign Automation</td>
+              <td>Sends automated, targeted emails with performance tracking, increasing engagement and conversions.</td>
+              <td>$2,000</td>
+              <td>$500</td>
+            </tr>
+            <tr>
+              <td>Social Media Integration</td>
+              <td>Connects social media platforms (LinkedIn, Facebook, Twitter) with the CRM, simplifying engagement
+                tracking and outreach.</td>
+              <td>$1,500</td>
+              <td>$400</td>
+            </tr>
+            <tr>
+              <td>HIPAA-Compliant Data Management</td>
+              <td>Ensures patient data security with encryption and regulatory compliance in all storage and transfer
+                processes.</td>
+              <td>$3,000</td>
+              <td>$600</td>
+            </tr>
+            <tr>
+              <td>Real-Time Dashboards</td>
+              <td>Provides custom dashboards showing KPIs such as conversion rates and campaign performance for quick
+                insights.</td>
+              <td>$2,500</td>
+              <td>$500</td>
+            </tr>
+            <tr>
+              <td>Appointment Scheduling for Screenings</td>
+              <td>Streamlines appointment bookings with automated reminders, reducing no-shows and improving lead
+                conversion.</td>
+              <td>$2,000</td>
+              <td>$450</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>CRM Setup Cost Breakdown</h3>
+    <div class="cost-breakdown">
+      <p><strong>Total Setup Fees for CRM Setup:</strong> $12,000 to $15,000</p>
+      <p><strong>Total Monthly Management Fees:</strong> $2,500 to $3,750</p>
+    </div>
+
+    <h4>Additional Cost Considerations</h4>
+    <ul>
+      <li><strong>Service Provider Fees:</strong> Fees for third-party services (Mailchimp, Twilio, LinkedIn Ads, etc.)
+        are billed directly to AEI. Our team will assist with setup and ensure smooth integration with the CRM system.
+      </li>
+      <li><strong>Customizations & Add-ons:</strong> Additional features like AI-driven lead scoring, advanced analytics,
+        or integration with other platforms can be added to meet AEI's specific needs. These may involve extra costs based
+        on customization requirements.</li>
+    </ul>
+
+<div class="page-break"></div>
+  </section>
+
+  <section class="service-section">
+    <h2>3. Content Creation & Social Media Management</h2>
+
+    <h3>Scope of Work</h3>
+    <p>The Content Creation & Social Media Management package is crafted to establish AEI as a trusted authority in
+      clinical trials, leveraging a Business-to-Ethical Exchange (B2E) approach. This strategy prioritizes ethically
+      compliant, impactful content that aligns with AEI's brand values and resonates with its target audience. Our bulk
+      content creation process not only ensures consistency and accessibility but also simplifies the IRB submission
+      process by enabling all assets—such as emails, SMS, brochures, website content, and ads—to be approved in a single
+      batch. This streamlined approach reduces delays, improves resource efficiency, and ensures all content aligns with
+      AEI’s marketing and recruitment goals.</p>
+
+    <h3>Content Strategy Overview</h3>
+    <p>AEI’s content strategy will feature a mix of high-impact visuals, educational short-form videos, and consistent
+      social media updates across platforms like LinkedIn, Instagram, and Facebook. By creating a readily available
+      content library, AEI can maintain a steady, engaging digital presence that drives patient awareness and
+      participation in clinical trials.</p>
+
+    <h3>Expected Outcomes</h3>
+    <ul>
+      <li><strong>Consistent Audience Engagement:</strong> By maintaining a steady content flow, AEI will reinforce its
+        presence across social channels, building brand trust and awareness.</li>
+      <li><strong>Streamlined Compliance:</strong> Bulk IRB submissions reduce approval delays, enabling faster content
+        deployment with all regulatory standards met.</li>
+      <li><strong>Increased Lead Generation:</strong> Engaging visuals and videos foster a connection with potential
+        participants, encouraging them to explore and sign up for AEI’s clinical trials.</li>
+      <li><strong>Data-Driven Adjustments:</strong> Through performance analytics, we can fine-tune content strategies to
+        maximize reach and engagement over time.</li>
+    </ul>
+
+    <p>This Content Creation & Social Media Management package equips AEI with a robust, scalable strategy that enhances
+      its digital presence and drives actionable results in patient recruitment and engagement.</p>
+
+    <div class="page-break"></div>
+
+    <h3>Content Creation Features and Pricing Breakdown</h3>
+    <div class="cost-breakdown">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Description</th>
+              <th>Setup Fee</th>
+              <th>Monthly Management Fee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>High-impact Image Posts</td>
+              <td>Engaging, high-quality visuals (40 images) optimized for social media on platforms like LinkedIn,
+                Instagram, and Facebook.</td>
+              <td>$2,500</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Short-form Video Content</td>
+              <td>Ten educational, high-engagement short-form videos (30 sec - 1 min) designed to inform and connect with
+                AEI’s target audience.</td>
+              <td>$3,500</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>Bulk Content Creation for IRB</td>
+              <td>Comprehensive content package (emails, SMS, brochures, ads) submitted for IRB approval in one batch,
+                ensuring compliance and cost efficiency.</td>
+              <td>$5,500</td>
+              <td>$1,200</td>
+            </tr>
+            <tr>
+              <td>Social Media Strategy & Execution</td>
+              <td>Strategic content calendar development and management, supported by analytics for ongoing performance
+                tracking and adjustments.</td>
+              <td>$3,000</td>
+              <td>$1,500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Cost Breakdown</h3>
+    <div class="cost-summary">
+    <ul>
+      <p><strong>Setup Fees:</strong> $14,500 across all content creation services.</p>
+      <p><strong>Monthly Management Fees:</strong> $2,700 per month, covering ongoing content management, engagement
+        tracking, and optimization.</p>
+      <p><strong>Service Fees:</strong> Variable, based on external agreements, such as IRB submission fees.</p>
+      </ul>
+    </div>
+
+ <div class="page-break"></div>
+  </section>
+
+  <!-- Digital Marketing Section -->
+  <section class="service-section">
+    <h2>4. Digital Marketing</h2>
+
+    <h3>Scope of Work</h3>
+    <p>The Digital Marketing package is designed to drive high-quality traffic to AEI’s platforms, utilizing advanced
+      tracking, strategic ads, and geo-targeted marketing. Our goal is to maximize reach, attract prospective patients,
+      and improve engagement by combining Google Analytics, PPC, and social media campaigns. We will also implement a
+      Consent Management Platform (CMP) to maintain data privacy compliance and strengthen patient trust.</p>
+
+    <p>By tracking real-time analytics, creating custom ad campaigns, and using geo-targeting, we ensure AEI’s digital
+      marketing efforts reach the right people at the right time. This approach streamlines the path from awareness to
+      enrollment, while regular optimization of campaigns ensures that each dollar spent is impactful and measurable.</p>
+
+    <h3>Expected Outcomes</h3>
+    <ul>
+      <li><strong>Improved Conversion Rates:</strong> Targeted, optimized campaigns increase interest and drive
+        conversions for clinical trial participation.</li>
+      <li><strong>Enhanced Audience Engagement:</strong> With custom ads and geo-targeting, AEI can reach a precise
+        audience, fostering stronger connections.</li>
+      <li><strong>Data-Driven Strategy Adjustments:</strong> Real-time analytics from GA4 and GTM offer insights to
+        continuously refine and improve marketing efforts.</li>
+      <li><strong>Privacy Compliance:</strong> The CMP ensures all data collection and usage meet regulatory standards,
+        building trust with users.</li>
+    </ul>
+
+    <p>This Digital Marketing package supports AEI’s goal of expanding reach and patient engagement. By combining
+      strategic targeting, compliance measures, and data-driven insights, we create a digital ecosystem that enhances
+      campaign effectiveness and maximizes return on investment.</p>
+
+    <h3>Digital Marketing Features and Pricing Breakdown</h3>
+    <div class="cost-breakdown">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Description</th>
+              <th>Setup Fee</th>
+              <th>Monthly Management Fee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google Analytics 4 (GA4)</td>
+              <td>Tracks real-time user behavior (sessions, bounce rates, conversions) to provide insights for improving
+                campaign performance.</td>
+              <td>$2,500</td>
+              <td>$500</td>
+            </tr>
+            <tr>
+              <td>Google Tag Manager (GTM)</td>
+              <td>Enables advanced event tracking (e.g., form submissions, video plays) without modifying website code.
+              </td>
+              <td>$1,500</td>
+              <td>$300</td>
+            </tr>
+            <tr>
+              <td>PPC & Meta Ads Campaigns</td>
+              <td>Custom, targeted ads on Google and Meta, using audience segmentation and keyword optimization.</td>
+              <td>$3,000 per platform, per campaign</td>
+              <td>$750 per platform, per campaign</td>
+            </tr>
+            <tr>
+              <td>Consent Management Platform (CMP)</td>
+              <td>Ensures compliance with data privacy regulations and manages user consent preferences, essential for
+                tracking and cookies.</td>
+              <td>$2,000</td>
+              <td>$400</td>
+            </tr>
+            <tr>
+              <td>Geo-targeting & Geofencing</td>
+              <td>Targets users based on location, optimizing ad delivery in regions relevant to AEI’s healthcare
+                screenings and trials.</td>
+              <td>$3,500</td>
+              <td>$1,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Cost Breakdown</h3>
+    <div class="cost-summary">
+      <p><strong>Setup Fees:</strong> $12,500 across all digital marketing services.</p>
+      <p><strong>Monthly Management Fees:</strong> $2,950 per month, covering campaign management, tracking, and
+        performance optimization.</p>
+      <p><strong>Service Provider Fees:</strong> Variable, paid directly to platforms like Google and Meta, based on
+        specific campaign budgets.</p>
+    </div>
+
+<div class="page-break"></div>
+  </section>
+
+<section class="service-section">
+  <h2>5. Overall Cost Breakdown</h2>
+  <div class="section-total-cost section-container">
+    <p>This breakdown summarizes the setup and ongoing costs required to execute the proposed digital strategy, ensuring
+      AEI can make informed budgetary decisions.</p>
+
+    <div class="cost-summary">
+      <h3>Total Setup Fees</h3>
+      <ul>
+        <li><strong>Minimum Total Setup Fees:</strong> $67,000</li>
+        <li><strong>Maximum Total Setup Fees:</strong> $70,000</li>
+      </ul>
+    </div>
+
+    <div class="cost-summary">
+      <h3>Total Monthly Management Fees</h3>
+      <ul>
+        <li><strong>Minimum Total Monthly Management Fees:</strong> $8,150 per month</li>
+        <li><strong>Maximum Total Monthly Management Fees:</strong> $9,400 per month</li>
+      </ul>
+    </div>
+
+    <p>This cost structure provides a complete view of the initial investment and ongoing expenses associated with AEI’s
+      digital marketing, content, and CRM initiatives.</p>
+  </div>
+
+</section>
+
+  <section class="timeline">
+    <h2>Project Timeline</h2>
+    <div class="section-timeline section-container">
+      <p>The project will follow a phased approach to ensure efficient implementation and optimized results. Each phase
+        includes clear milestones to maintain transparency and trackable progress.</p>
+
+      <ul>
+        <li><strong>Phase 1 (Month 1):</strong> Website Development & Content Creation - Initial efforts will focus on
+          building AEI’s website, creating high-quality content, and establishing foundational digital assets.</li>
+        <li><strong>Phase 2 (Month 2):</strong> CRM Setup & Marketing Campaign Launch - This phase involves setting up
+          AEI’s CRM, integrating it with the website, and launching initial digital marketing campaigns.</li>
+        <li><strong>Phase 3 (Month 3):</strong> Full Ads Rollout, Geo-targeting & Continuous Optimization - Final phase
+          includes comprehensive ad deployment with geo-targeting and continuous campaign optimization based on
+          performance data.</li>
+      </ul>
+    </div>
+
+    <div class="gantt-chart-container" style="text-align: center; margin-top: 20px;">
+      <img src="/ProjectTimeline-AEI.png" alt="Gantt Chart"
+        style="max-width:80%; height: auto; border: 1px solid #00509E; border-radius: 8px;">
+    </div>
+
+  </section>
+<div class="page-break"></div>
+
+<section class="benefits-list">
+  <h2>Project Benefits</h2>
+  <ul>
+    <li><span class="highlight">Enhanced Conversion Rates:</span> Optimized landing pages and targeted campaigns
+      significantly increase AEI’s ability to convert website visitors and social media followers into clinical trial
+      participants.</li>
+    <li><span class="highlight">Operational Efficiency:</span> Automated workflows and CRM integration streamline
+      patient management and reduce manual effort.</li>
+    <li><span class="highlight">Superior User Experience:</span> Mobile-first, responsive design for trust and
+      satisfaction.</li>
+    <li><span class="highlight">Data-Driven Insights:</span> With real-time analytics, AEI gains actionable insights
+      that support data-backed decision-making and continuous optimization of outreach efforts.</li>
+    <li><span class="highlight">Compliance and Security Assurance:</span> HIPAA-compliant data management practices
+      ensure AEI meets industry regulations and builds user trust.</li>
+  </ul>
+</section>
+
+<section class="section-contract-terms section-container">
+  <h2>Contract Terms</h2>
+  <p>The following terms outline engagement expectations and project commitments:</p>
+  <ul>
+    <li><strong>Minimum Engagement:</strong> 3 to 6 months, with optional extensions based on performance metrics and
+      ongoing campaign success.</li>
+    <li><strong>60-90 Day Build Plan:</strong> This schedule details deliverable timelines, ensuring transparent
+      expectations and accountability.</li>
+    <li><strong>90-Day Marketing Commitment:</strong> Ad campaigns, including PPC and social media ads, will run for a
+      minimum of three months post-launch, allowing for meaningful optimization and performance analysis.</li>
+  </ul>
+  <p>These contract terms create a framework for a successful partnership and ensure clear deliverable timelines for
+    AEI’s project.</p>
+</section>
+
+<section class="section-deliverables-payment section-container">
+  <h2>Deliverables & Payment Structure</h2>
+
+  <h3>Deliverables</h3>
+  <p>To ensure AEI receives measurable value at every stage, the project includes specific deliverables within each
+    phase. Examples include live website pages, configured CRM systems, completed content assets, and ongoing digital
+    marketing reports. This structure provides transparency and accountability, ensuring AEI can track progress and
+    results effectively.</p>
+
+  <h3>Payment Structure</h3>
+  <ul>
+    <li><strong>Setup Fees:</strong> 60% of total setup fees due at contract signing, with the remaining 40% due within
+      15 days after project completion.</li>
+    <li><strong>Ongoing Management:</strong> Monthly management fees are billed on the contract start date, recurring on
+      the same day each month.</li>
+    <li><strong>Direct Billing for Ad & Service Fees:</strong> AEI will be billed directly by service providers (e.g.,
+      Google Ads, Mailchimp, Twilio), including ad spend costs, which are paid directly by AEI to each platform.</li>
+    <li><strong>Late Payment Interest:</strong> A 20% interest rate will be applied to any balance unpaid 30 days past
+      the due date, accruing monthly until paid in full.</li>
+  </ul>
+  <p>This structure provides AEI with clear payment timelines and maintains consistent project funding to ensure all
+    deliverables are met.</p>
+</section>
+
+<section class="next-steps">
+  <h2>Next Steps</h2>
+  <p>We are excited to help AEI expand its reach and optimize patient engagement through a comprehensive digital
+    strategy. Please review this proposal in detail. Once you are ready to proceed, we can schedule a follow-up meeting
+    to confirm the specifics and begin the onboarding process.</p>
+  <p>Upon approval, our team will initiate the first phase of the project, ensuring AEI’s digital transformation is
+    launched efficiently and effectively.</p>
+</section>
+
+<footer class="footer">
+  <p class="footer-company">TBH Digital Solutions</p>
+  <p class="footer-title">Digital Marketing Proposal</p>
+  <p class="footer-website">www.TBHDigitalSolutions.com</p>
+  <p class="footer-disclaimer">
+    Disclaimer: This proposal is intended for informational and planning purposes only. Prices and services are subject
+    to change based on further discussions and project requirements. This is not a finalized price and should not be
+    considered a contractual agreement.
+  </p>
+</footer>
+</body>
+
+</html>

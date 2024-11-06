@@ -12,12 +12,12 @@
       "subtitle": "Website Build",
       "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/videos/step_2_video/2.mp4",
       "slides": [
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_1/home3.jpg", "alt": "Website Build" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_2/home5.jpg", "alt": "Website Build" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_3/WebsiteExamples.png", "alt": "Website Build" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_4/SSOLeadGeneration.png", "alt": "Website Build" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_5/GatedWebsiteContent.png", "alt": "Website Build" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_6/Faq Sheet - 1.png", "alt": "Website Build" }
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_1/home3.jpg", "alt": "Website Build 1" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_2/home5.jpg", "alt": "Website Build 2" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_3/WebsiteExamples.png", "alt": "Website Build 3" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_4/SSOLeadGeneration.png", "alt": "Website Build 4" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_5/GatedWebsiteContent.png", "alt": "Website Build 5" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step2/images/step_2_image_6/Faq%20Sheet%20-%201.png", "alt": "Website Build 6" }
       ],
       "demos": {
         "LandingPageExample1": {
@@ -76,41 +76,39 @@
       "subtitle": "CRM Setup",
       "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_video/3.mp4",
       "slides": [
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8592.jpg", "alt": "CRM Setup Slide 1" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8593.JPG", "alt": "CRM Setup Slide 2" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8594.JPG", "alt": "CRM Setup Slide 3" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8606.jpg", "alt": "CRM Setup Slide 4" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_1/MainWide-75.jpg", "alt": "CRM Image 1" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_2/MainWide-75.jpg", "alt": "CRM Image 2" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_3/MainWide-75.jpg", "alt": "CRM Image 3" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_4/MainWide-75.jpg", "alt": "CRM Image 4" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_5/MainWide-75.jpg", "alt": "CRM Image 5" }
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_2/TBH-CRM.png", "alt": "TBH Digital Solutions Custom CRM" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_2/inbox-messaging-crm.png", "alt": "CRM Unified Inbox & Messaging" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_2/quick-actions-crm.png", "alt": "CRM Quick Actions" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_2/reports-crm.png", "alt": "CRM Marketing Reports" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_2/smart-list-crm.png", "alt": "CRM Smart Lists" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_2/tag-management-crm.png", "alt": "CRM Tag Management" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/images/step_3_image_2/workflow-active-crm.png", "alt": "CRM Active Campaigns / Workflows" }
       ],
       "crmVideos": [
         {
-          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-1-video/Email Automation.png",
-          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-1-video/TBH Custom CRM-1.mp4",
-          "alt": "CRM Video 1 - Email Automation"
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-1-video/Email%20Automation.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-1-video/TBH%20Custom%20CRM-1.mp4",
+          "alt": "CRM Email Automation"
         },
         {
-          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-2-video/Appointment Setting.png",
-          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-2-video/TBH Custom CRM-2.mp4",
-          "alt": "CRM Video 2 - Appointment Setting"
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-2-video/Appointment%20Setting.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-2-video/TBH%20Custom%20CRM-2.mp4",
+          "alt": "CRM Appointment Setting"
         },
         {
-          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-3-video/Smart Contact List.png",
-          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-3-video/TBH Custom CRM-3.mp4",
-          "alt": "CRM Video 3 - Smart Contact List"
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-3-video/Smart%20Contact%20List.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-3-video/TBH%20Custom%20CRM-3.mp4",
+          "alt": "CRM Smart Contact List"
         },
         {
-          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-4-video/Marketing Reports.png",
-          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-4-video/TBH Custom CRM-4.mp4",
-          "alt": "CRM Video 4 - Marketing Reports"
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-4-video/Marketing%20Reports.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-4-video/TBH%20Custom%20CRM-4.mp4",
+          "alt": "CRM Marketing Reports"
         },
         {
-          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-5-video/A and B Split Testing.png",
-          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-5-video/TBH Custom CRM-5.mp4",
-          "alt": "CRM Video 5 - A/B Split Testing"
+          "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-5-video/A%20and%20B%20Split%20Testing.png",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step3/videos/step_3_crm-5-video/TBH%20Custom%20CRM-5.mp4",
+          "alt": "CRM A/B Split Testing"
         }
       ]
     },
@@ -120,10 +118,10 @@
       "subtitle": "Content Creation & Social Media Management",
       "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video/4.mp4",
       "slides": [
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8607.JPG", "alt": "Content Creation Slide 1" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_9169.jpg", "alt": "Content Creation Slide 2" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_9170.jpg", "alt": "Content Creation Slide 3" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_9171.JPG", "alt": "Content Creation Slide 4" }
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8607.JPG", "alt": "Content Creation 1" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_9169.jpg", "alt": "Content Creation 2" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_9170.jpg", "alt": "Content Creation 3" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_9171.JPG", "alt": "Content Creation 4" }
       ],
       "imageCarousel": [
         { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/images/step_4_image_1/tabletCadSM.jpg", "alt": "Image 1" },
@@ -139,12 +137,12 @@
       "videoCarousel": [
         {
           "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_1/natoliscientific.png",
-          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_1/Natoli Scientific - Short.mp4",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_1/Natoli%20Scientific%20-%20Short.mp4",
           "alt": "Video 1"
         },
         {
           "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_2/ncf45.png",
-          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_2/NCF-45 SM Short Clip 2 1-1.mp4",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_2/NCF-45%20SM%20Short%20Clip%202%201-1.mp4",
           "alt": "Video 2"
         },
         {
@@ -159,7 +157,7 @@
         },
         {
           "thumbnail": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_5/MainWide-7455.jpg",
-          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_5/FINAL VIDEO_3.mp4",
+          "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step4/videos/step_4_video_5/FINAL%20VIDEO_3.mp4",
           "alt": "Video 5"
         }
       ],
@@ -239,20 +237,20 @@
       "subtitle": "Digital Marketing",
       "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/videos/step_5_video/5.mp4",
       "slides": [
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_1/Content Marketing Funnel-O.png", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_2/Book Now-1.jpg", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_3/Book Now-2.jpg", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_4/Download Whitepaper-LinkedIn-1.jpg", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_5/Sign-Up-Webinar-1.jpg", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_6/ga-5.png", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_6/TBH Table Content BG Template2.png", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_8/ga-6.png", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_9/ga-7.png", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_10/ga-4.png", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_11/Google Display Ads - Full - 1.png", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_12/ga-3.png", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_13/ga-2.png", "alt": "Digital Marketing" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_14/ga-segments-1.png", "alt": "Digital Marketing" }
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_1/Content Marketing Funnel-O.png", "alt": "Digital Marketing 1" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_2/Book Now-1.jpg", "alt": "Digital Marketing 2" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_3/Book Now-2.jpg", "alt": "Digital Marketing 3" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_4/Download Whitepaper-LinkedIn-1.jpg", "alt": "Digital Marketing 4" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_5/Sign-Up-Webinar-1.jpg", "alt": "Digital Marketing 5" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_6/ga-5.png", "alt": "Digital Marketing 6" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_6/TBH Table Content BG Template2.png", "alt": "Digital Marketing 7" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_8/ga-6.png", "alt": "Digital Marketing 8" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_9/ga-7.png", "alt": "Digital Marketing 9" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_10/ga-4.png", "alt": "Digital Marketing 10" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_11/Google Display Ads - Full - 1.png", "alt": "Digital Marketing 11" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_12/ga-3.png", "alt": "Digital Marketing 12" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_13/ga-2.png", "alt": "Digital Marketing 13" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/step5/images/step_5_image_14/ga-segments-1.png", "alt": "Digital Marketing 14" }
       ]
     },
     {
@@ -261,10 +259,10 @@
       "subtitle": "Project Management & Timeline Projections",
       "videoUrl": "https://storage.googleapis.com/tbh-digital-solutions-content/step6/videos/step_6_video/6.mp4",
       "slides": [
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/MainWide-75.jpg", "alt": "Consultation Slide 1" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/Opening Day Social Media Post.png", "alt": "Consultation Slide 2" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/Opening Day Story Post.png", "alt": "Consultation Slide 3" },
-        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8573.jpg", "alt": "Consultation Slide 4" }
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/MainWide-75.jpg", "alt": "Project Management Slide 1" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/Opening Day Social Media Post.png", "alt": "Project Management Slide 2" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/Opening Day Story Post.png", "alt": "Project Management Slide 3" },
+        { "image": "https://storage.googleapis.com/tbh-digital-solutions-content/thumbnails/IMG_8573.jpg", "alt": "Project Management Slide 4" }
       ]
     },
     {

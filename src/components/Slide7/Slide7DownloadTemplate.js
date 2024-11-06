@@ -6,7 +6,7 @@ import { logEvent } from '../firebaseLogging';
 import { useUser } from '../../UserContext';
 
 const Slide7DownloadTemplate = () => {
-  const { userId } = useUser(); // Retrieve userId from context
+  const { userId } = useUser();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [htmlContent, setHtmlContent] = useState('');
 
@@ -14,7 +14,7 @@ const Slide7DownloadTemplate = () => {
   const handleDownload = async () => {
     await trackUserAction(userId, 'Downloaded Proposal');
     logEvent('download_proposal', { userId });
-    window.location.href = '/assets/proposals/Andover_Eye_Institute_Proposal.pdf';
+    window.location.href = '/assets/html/aei-proposal.pdf';
   };
 
   // Open modal, fetch HTML content, and log view proposal event
@@ -37,6 +37,12 @@ const Slide7DownloadTemplate = () => {
     setIsModalOpen(false);
     setHtmlContent('');
     logEvent('close_proposal', { userId });
+  };
+
+  const handleOverlayClick = (e) => {
+    if (e.target.classList.contains('modal-overlay')) {
+      closeModal();
+    }
   };
 
   return (
@@ -67,8 +73,8 @@ const Slide7DownloadTemplate = () => {
 
       {/* Modal for Viewing Proposal */}
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-3xl w-full">
+        <div className="modal-overlay fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50" onClick={handleOverlayClick}>
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-3xl w-full relative">
             <button onClick={closeModal} className="absolute top-4 right-4 text-2xl text-red-500 hover:text-red-700">&times;</button>
             <div className="overflow-y-auto max-h-[80vh]">
               <div dangerouslySetInnerHTML={{ __html: htmlContent }} />

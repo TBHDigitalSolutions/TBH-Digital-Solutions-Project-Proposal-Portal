@@ -1,7 +1,7 @@
 // src/components/Slide6/Slide6QuoteTemplate.js
 
 import React, { useState, useEffect } from 'react';
-import Modal from '../common/Modal';
+import Modal2 from '../common/Modal2'; // Updated to use Modal2
 import withData from '../../hoc/withData';
 import { logEvent } from '../firebaseLogging';
 import { useUser } from '../../UserContext';
@@ -13,8 +13,8 @@ const Slide6QuoteTemplate = ({ data }) => {
   const { userId } = useUser(); // Retrieve userId from context
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [htmlContent, setHtmlContent] = useState('');
+  const [htmlError, setHtmlError] = useState(null);
 
-  // Destructure data properties
   const {
     title,
     description,
@@ -33,26 +33,29 @@ const Slide6QuoteTemplate = ({ data }) => {
     }
   }, [userId]);
 
-  // Toggle modal visibility and fetch HTML content
-  const toggleHtmlModal = async () => {
+  const fetchHtmlContent = async () => {
+    try {
+      const response = await fetch('/assets/html/milestones.html');
+      if (!response.ok) throw new Error('Failed to load the HTML document.');
+      const text = await response.text();
+      setHtmlContent(text);
+      setHtmlError(null);
+      logEvent('view_milestones_modal', { page: 'Slide 6 Quote', action: 'open', userId });
+    } catch (error) {
+      console.error('Error loading HTML:', error);
+      setHtmlError('Could not load the document. Please try again later.');
+    }
+  };
+
+  const toggleHtmlModal = () => {
     if (!isModalOpen) {
-      try {
-        const response = await fetch('/assets/html/milestones.html');
-        if (!response.ok) throw new Error('Failed to load the HTML document.');
-        const text = await response.text();
-        setHtmlContent(text);
-        logEvent('view_milestones_modal', { page: 'Slide 6 Quote', action: 'open', userId });
-      } catch (error) {
-        console.error('Error loading HTML:', error);
-        alert('Could not load the document. Please try again later.');
-      }
+      fetchHtmlContent();
     } else {
       logEvent('view_milestones_modal', { page: 'Slide 6 Quote', action: 'close', userId });
     }
     setIsModalOpen(!isModalOpen);
   };
 
-  // Log section views when they come into view
   const logSectionView = (section) => {
     logEvent('view_section', { page: 'Slide 6 Quote', section, userId });
   };
@@ -133,14 +136,16 @@ const Slide6QuoteTemplate = ({ data }) => {
         See Project Milestones Details
       </button>
 
-      {/* Modal for Viewing HTML Content */}
+      {/* Modal2 for Viewing HTML Content */}
       {isModalOpen && (
-        <Modal isOpen={isModalOpen} onClose={toggleHtmlModal}>
-          <div className="p-8 bg-off-white dark:bg-soft-black rounded-lg shadow-lg max-w-2xl mx-auto">
+        <Modal2 isOpen={isModalOpen} onClose={toggleHtmlModal}>
+          <div className="p-8 bg-off-white dark:bg-soft-black rounded-lg shadow-lg max-w-2xl mx-auto overflow-y-auto max-h-[80vh]">
             <h3 className="text-3xl font-aldrich font-bold mb-6 text-soft-black dark:text-off-white">Project Milestones</h3>
-            <div className="overflow-y-auto max-h-[80vh]">
+            {htmlError ? (
+              <p className="text-red-500 dark:text-red-400">{htmlError}</p>
+            ) : (
               <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
-            </div>
+            )}
             <button
               onClick={toggleHtmlModal}
               className="mt-6 text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 font-semibold transition-colors"
@@ -148,7 +153,7 @@ const Slide6QuoteTemplate = ({ data }) => {
               Close
             </button>
           </div>
-        </Modal>
+        </Modal2>
       )}
     </div>
   );

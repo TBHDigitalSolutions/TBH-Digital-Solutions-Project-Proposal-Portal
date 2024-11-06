@@ -14,16 +14,6 @@
 .swiper-pagination-bullet-active {
   @apply bg-logo-blue; /* Ensure this is defined in your Tailwind config */
 }
-
-/* General Swiper Custom Styles */
-.swiper-pagination-bullet {
-  @apply w-2 h-2 bg-gray-400 rounded-full mx-1;
-}
-
-.swiper-button-disabled {
-  @apply opacity-50 cursor-not-allowed;
-}
-
 /* General Colors and Styling */
 :root {
   --bg-color-dark: #060512;
@@ -50,7 +40,7 @@ header {
 
 /* Containers */
 .main-container {
-  display: flex;
+  display: fixed;
   height: calc(100vh - 160px);
   justify-content: space-between;
 }
@@ -70,10 +60,10 @@ header {
 /* Footer */
 .footer {
   position: fixed;
-  bottom: -10px;
+  bottom: 6px;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 50px;
   padding-top: 10px;
   background: linear-gradient(180deg, var(--bg-color-dark), #0E1730);
   font-family: 'Aldrich', sans-serif;
@@ -103,13 +93,22 @@ header {
   transition: width 0.3s ease;
   border-radius: 0.375rem;
 }
+/* In your global styles or Tailwind configuration */
+.slick-prev, .slick-next, .swiper-button-prev, .swiper-button-next {
+  color: #0EAFFB; /* logo-blue */
+  font-size: 2rem;
+}
+
+.slick-prev:hover, .slick-next:hover, .swiper-button-prev:hover, .swiper-button-next:hover {
+  color: #00509E; /* darker blue */
+}
 
 /* Slide Container */
 .slide-container {
   padding: 1.5rem;
   background-color: var(--bg-color-light);
   border-radius: 0.5rem;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.35);
   max-width: 90%;
   margin: 2rem auto;
   color: var(--text-color-dark);
@@ -170,28 +169,67 @@ h3.title-xl {
 /* "View Details" Button */
 .view-details-btn {
   display: inline-block;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #007acc;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2fa4da; 
   text-decoration: underline;
   margin-top: 1.5rem;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 .view-details-btn:hover {
-  color: #005fa3;
+  color: #003F7D;
 }
 
-/* Modal */
-.modal, .slide-modal {
-  background-color: rgba(6, 5, 18, 0.9);
-  padding: 1.5rem;
-  max-width: 32rem;
-  margin: auto;
-  border-radius: 0.5rem;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+/* Custom Header Shadow */
+.header {
+  box-shadow: 0px 4px 12px rgba(14, 175, 251, 0.25);
 }
-.modal h3, .slide-modal h3 {
+
+/* Custom Section Shadow and Hover Effects */
+.section-container {
+  padding: 1.2rem; /* 32px */
+  background-color: #1b1b1f3c;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(14, 175, 251, 0.35);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.section-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(74, 174, 220, 0.35);
+}
+
+/* Modal Overlay */
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: flex;
+  inset: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.7rem;
+  overflow-y: auto;
+}
+
+/* Modal Content */
+.modal-content {
+  background: rgba(6, 5, 18, 0.95);
+  /* Dark overlay for better focus */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 70vw;
+  max-height: 80vh;
+  width: 100%;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  display: inherit;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Heading and Titles */
+.modal h3 {
   font-size: 1.5rem;
   font-weight: 700;
   font-family: 'Sovjet Box Bold', sans-serif;
@@ -199,48 +237,45 @@ h3.title-xl {
   margin-bottom: 1rem;
   text-align: center;
 }
-.modal .close-btn, .slide-modal .close-btn {
-  font-size: 1.25rem;
-  color: #ff4d4f;
-  cursor: pointer;
-  margin-top: 1rem;
-  text-align: center;
-  transition: color 0.3s ease;
-}
-.modal .close-btn:hover, .slide-modal .close-btn:hover {
-  color: #d11a1c;
-}
 
-/* Modal Container */
-.modal-container {
+/* Video Player Container */
+.video-player-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  overflow-y: auto;
+  width: 100%;
+  max-height: 80vh;
+  padding: 0.9rem;
 }
 
-/* Modal Content */
-.modal-content {
-  background: white;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  width: 90vw;
-  max-width: 1200px;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
+/* Video Size Handling */
+.video-player-container .video-player {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  object-fit: fill;
+  /* Ensures video fits container */
 }
 
-.modal-iframe {
-  width: 90%;
-  height: 100%;
-  border: none;
-  border-radius: 0.5rem;
+.video-player-container.square-video .video-player {
+  width: 300px;
+  height: 300px;
+}
+
+.video-player-container.wide-video .video-player {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+}
+
+/* Error Message */
+.video-error-message {
+  color: #e53e3e;
+  /* Equivalent to Tailwind red-500 */
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.5rem;
 }
 
 /* Close Button */
@@ -250,31 +285,30 @@ h3.title-xl {
   right: 1rem;
   background: none;
   border: none;
-  color: var(--grey);
-  font-size: 1.5rem;
+  color: #ff4d4f;
+  font-size: 3.5rem;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.3s ease;
 }
+
 .modal-close-btn:hover {
-  color: #333;
-}
-/* styles.css */
-
-/* Custom Header Shadow */
-.header {
-  box-shadow: 0px 4px 12px rgba(14, 175, 251, 0.25);
+  color: #d11a1c;
 }
 
-/* Custom Section Shadow and Hover Effects */
-.section-container {
-  padding: 2rem; /* 32px */
-  background-color: #1B1B1F;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(14, 175, 251, 0.25);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+/* Arrow Styling */
+.custom-arrow {
+  background: none;
+  border: none;
+  font-size: 4rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
-.section-container:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 18px rgba(14, 175, 251, 0.35);
+.custom-arrow:hover {
+  color: #ff4d4f;
+}
+
+.left-arrow {
+  transform: scaleX(-1);
 }

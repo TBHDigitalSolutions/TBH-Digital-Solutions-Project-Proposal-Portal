@@ -54,20 +54,6 @@ const App = () => {
     }
   };
 
-  const handleNextStep = () => {
-    if (step < maxSteps) {
-      setStep(step + 1);
-      logEvent('next_step', { step: step + 1 });
-    }
-  };
-
-  const handlePreviousStep = () => {
-    if (step > 1) {
-      setStep(step - 1);
-      logEvent('previous_step', { step: step - 1 });
-    }
-  };
-
   const onStartProposal = () => {
     setStep(2);
     logEvent('start_proposal', { step: 2 });
